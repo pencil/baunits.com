@@ -372,7 +372,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col h-screen">
-      <div className="flex-grow overflow-auto md:px-2">
+      <div className="flex-grow overflow-auto xl:px-2">
         <table className="relative w-full">
           <thead className="text-left">
             <tr>
