@@ -129,6 +129,7 @@ units = [
 if CSV:
     import csv
 
+    print("Writing units to build/units.csv")
     with open("build/units.csv", "w+", newline="") as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(
@@ -174,6 +175,7 @@ if CSV:
 
 
 if MD:
+    print("Writing units to build/units.md")
     with open("build/units.md", "w+") as mdfile:
         mdfile.write("# Units\n\n")
         mdfile.write(
@@ -204,15 +206,19 @@ if MD:
 
 
 with open("src/data/units.json", "w+") as jsonfile:
+    print(f"Writing {len(units)} units to src/data/units.json")
     json.dump([dataclasses.asdict(unit) for unit in units], jsonfile, indent=2)
 
 # Download all icons to build/icons/
 os.makedirs("public/icons", exist_ok=True)
 for unit in units:
     path = f"public/icons/{unit.slug}.png"
+    print(path, end=" ")
     # Skip if the icon is already downloaded
     if os.path.exists(path):
+        print("exists")
         continue
     icon = get_page_bytes(unit.icon_url)
     with open(path, "wb") as iconfile:
         iconfile.write(icon)
+        print("downloaded")
