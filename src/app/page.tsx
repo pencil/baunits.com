@@ -195,37 +195,37 @@ export default function Home() {
         name: "Matter",
         key: "matter",
         render: (unit: Unit) => renderResource(unit.matter),
-        filter: {
-          type: "range",
-          min: findMin(units, "matter"),
-          max: findMax(units, "matter"),
-          step: 25,
-          val: (unit: Unit) => unit.matter,
-        },
+        // filter: {
+        //   type: "range",
+        //   min: findMin(units, "matter"),
+        //   max: findMax(units, "matter"),
+        //   step: 25,
+        //   val: (unit: Unit) => unit.matter,
+        // },
       },
       {
         name: "Energy",
         key: "energy",
         render: (unit: Unit) => renderResource(unit.energy),
-        filter: {
-          type: "range",
-          min: findMin(units, "energy"),
-          max: findMax(units, "energy"),
-          step: 25,
-          val: (unit: Unit) => unit.energy,
-        },
+        // filter: {
+        //   type: "range",
+        //   min: findMin(units, "energy"),
+        //   max: findMax(units, "energy"),
+        //   step: 25,
+        //   val: (unit: Unit) => unit.energy,
+        // },
       },
       {
         name: "Bandwidth",
         key: "bandwidth",
         render: (unit: Unit) => renderResource(unit.bandwidth),
-        filter: {
-          type: "range",
-          min: findMin(units, "bandwidth"),
-          max: findMax(units, "bandwidth"),
-          step: 1,
-          val: (unit: Unit) => unit.bandwidth,
-        },
+        // filter: {
+        //   type: "range",
+        //   min: findMin(units, "bandwidth"),
+        //   max: findMax(units, "bandwidth"),
+        //   step: 1,
+        //   val: (unit: Unit) => unit.bandwidth,
+        // },
       },
     ],
     []
@@ -261,7 +261,8 @@ export default function Home() {
             onChange={(e) =>
               setFilters((prev) => ({
                 ...prev,
-                [name]: (u: Unit) => f.val(u) >= parseInt(e.target.value),
+                [name]: (u: Unit) =>
+                  e.target.value === "" || f.val(u) >= parseInt(e.target.value),
               }))
             }
           />
@@ -319,10 +320,13 @@ export default function Home() {
         <table className="relative w-full">
           <thead className="text-left">
             <tr>
-              {columns.map((column) => (
+              {columns.map((column, idx) => (
                 <th
                   key={column.name}
-                  className="sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top"
+                  className={classNames(
+                    "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top",
+                    idx === 0 ? "min-w-14 max-w-14 w-14" : ""
+                  )}
                 >
                   <div className="flex flex-col">
                     <div className=" text-nowrap">{column.name}</div>
