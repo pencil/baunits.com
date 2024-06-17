@@ -1,0 +1,29 @@
+name: update-units
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-units:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Run update script
+        run: python dev/unit-dl.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'Update units'
+          title: 'Update units'
+          body: 'This PR updates the units to the latest version.'
+          branch: 'update-units'
+          base: 'main'
+          draft: false
