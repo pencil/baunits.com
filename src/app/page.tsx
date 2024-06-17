@@ -85,6 +85,9 @@ export default function Home() {
   const [filters, setFilters] = useState<
     Record<string, (unit: Unit) => boolean>
   >({});
+  const [sort, setSort] = useState<{ key: keyof Unit; asc: boolean } | null>(
+    null
+  );
   const columns = useMemo(
     () => [
       {
@@ -111,16 +114,19 @@ export default function Home() {
           type: "string",
           val: (unit: Unit) => unit.name,
         },
+        sortable: true,
       },
       {
         name: "Tech Tier",
         key: "tech_tier",
+        sort_key: "index",
         render: (unit: Unit) => unit.tech_tier,
         filter: {
           type: "select",
           options: uniqueArray(units.map((unit) => unit.tech_tier)),
           val: (unit: Unit) => unit.tech_tier,
         },
+        sortable: true,
       },
       {
         name: "Air/Ground",
@@ -178,6 +184,7 @@ export default function Home() {
           step: 1,
           val: (unit: Unit) => unit.health,
         },
+        sortable: true,
       },
       {
         name: "Damage",
@@ -190,6 +197,7 @@ export default function Home() {
           step: 1,
           val: (unit: Unit) => unit.damage,
         },
+        sortable: true,
       },
       {
         name: "Speed",
@@ -202,6 +210,7 @@ export default function Home() {
           step: 1,
           val: (unit: Unit) => unit.speed,
         },
+        sortable: true,
       },
       {
         name: "Range",
@@ -214,6 +223,7 @@ export default function Home() {
           step: 1,
           val: (unit: Unit) => unit.range,
         },
+        sortable: true,
       },
       {
         name: "Matter",
@@ -226,6 +236,7 @@ export default function Home() {
         //   step: 25,
         //   val: (unit: Unit) => unit.matter,
         // },
+        sortable: true,
       },
       {
         name: "Energy",
@@ -238,6 +249,7 @@ export default function Home() {
         //   step: 25,
         //   val: (unit: Unit) => unit.energy,
         // },
+        sortable: true,
       },
       {
         name: "Bandwidth",
@@ -250,6 +262,7 @@ export default function Home() {
         //   step: 1,
         //   val: (unit: Unit) => unit.bandwidth,
         // },
+        sortable: true,
       },
     ],
     []
@@ -334,8 +347,27 @@ export default function Home() {
     }
   }, []);
 
-  const filteredUnits = units.filter((unit) =>
-    Object.values(filters).every((filter) => filter(unit))
+  const filteredUnits = useMemo(
+    () =>
+      units
+        .filter((unit) =>
+          Object.values(filters).every((filter) => filter(unit))
+        )
+        .sort((a: Unit, b: Unit) => {
+          const fallback = a.index - b.index;
+          if (sort === null) return fallback;
+          const valA = a[sort.key];
+          const valB = b[sort.key];
+          let res = 0;
+          if (typeof valA === "string" && typeof valB === "string") {
+            res = valA.localeCompare(valB) * (sort.asc ? 1 : -1);
+          } else if (typeof valA === "number" && typeof valB === "number") {
+            res = (valA - valB) * (sort.asc ? 1 : -1);
+          }
+          if (res === 0) res = fallback;
+          return res;
+        }),
+    [filters, sort]
   );
 
   return (
@@ -353,7 +385,35 @@ export default function Home() {
                   )}
                 >
                   <div className="flex flex-col">
-                    <div className=" text-nowrap">{column.name}</div>
+                    {column.sortable ? (
+                      <button
+                        className="flex items-center"
+                        onClick={() =>
+                          setSort((prev) =>
+                            prev?.key === (column.sort_key || column.key)
+                              ? !prev.asc
+                                ? null
+                                : {
+                                    key: (column.sort_key ||
+                                      column.key) as keyof Unit,
+                                    asc: !prev.asc,
+                                  }
+                              : {
+                                  key: (column.sort_key ||
+                                    column.key) as keyof Unit,
+                                  asc: true,
+                                }
+                          )
+                        }
+                      >
+                        <div className="whitespace-nowrap">{column.name}</div>
+                        {sort?.key === (column.sort_key || column.key) && (
+                          <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
+                        )}
+                      </button>
+                    ) : (
+                      <div className="whitespace-nowrap">{column.name}</div>
+                    )}
                     <div>
                       {column.filter &&
                         renderFilter(column.name, column.filter as Filter)}
