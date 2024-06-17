@@ -5,8 +5,11 @@ clean:
 out:
 	NODE_ENV=production npm run build
 
-.PHONY: deploy
-deploy: clean out
+.PHONY: build
+build: clean out
+
+.PHONY: deploy/production
+deploy/production: out
 	aws s3 sync out/_next s3://baunits.com/_next \
 		--size-only \
 	 	--metadata-directive REPLACE \
