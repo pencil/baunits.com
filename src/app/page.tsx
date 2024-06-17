@@ -28,6 +28,25 @@ const renderBars = (value: number, max = 5) => (
 const renderResource = (value: number) => (
   <div className="w-full text-right">{value}</div>
 );
+const renderAntiAir = (value: string) => {
+  if (value === "Anti-Air") {
+    return (
+      <span title="Anti-Air: This unit is most effective against air units">
+        ✅
+      </span>
+    );
+  } else if (value === "Versatile") {
+    return (
+      <span title="Versatile: This unit is effective against both air and ground units">
+        ⭐️
+      </span>
+    );
+  } else {
+    return (
+      <span title="Ground: This unit can only attack ground units">❌</span>
+    );
+  }
+};
 
 type FilterString = {
   type: "string";
@@ -112,12 +131,17 @@ export default function Home() {
           options: uniqueArray(units.map((unit) => unit.air_ground)),
           val: (unit: Unit) => unit.air_ground,
         },
+        sortable: true,
       },
       {
         name: "Anti-Air?",
         key: "anti_air",
-        render: (unit: Unit) => renderBoolean(unit.anti_air),
-        filter: { type: "boolean", val: (unit: Unit) => unit.anti_air },
+        render: (unit: Unit) => renderAntiAir(unit.attack_type),
+        filter: {
+          type: "select",
+          options: uniqueArray(units.map((unit) => unit.attack_type)),
+          val: (unit: Unit) => unit.attack_type,
+        },
       },
       {
         name: "Splash?",

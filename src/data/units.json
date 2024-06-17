@@ -1,10 +1,11 @@
 [
   {
+    "index": 0,
     "name": "Crab",
     "slug": "crab",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": true,
     "ability": null,
@@ -19,11 +20,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crab.png"
   },
   {
+    "index": 1,
     "name": "Hunter",
     "slug": "hunter",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -38,11 +40,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hunter.png"
   },
   {
+    "index": 2,
     "name": "Recall",
     "slug": "recall",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": {
@@ -62,11 +65,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recall.png"
   },
   {
+    "index": 3,
     "name": "Recall Hunter",
     "slug": "recallhunter",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": {
@@ -86,11 +90,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallhunter.png"
   },
   {
+    "index": 4,
     "name": "Scorpion",
     "slug": "scorpion",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": true,
     "ability": null,
@@ -105,11 +110,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/scorpion.png"
   },
   {
+    "index": 5,
     "name": "Beetle",
     "slug": "beetle",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Versatile",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -124,11 +130,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/beetle.png"
   },
   {
+    "index": 6,
     "name": "Blink",
     "slug": "blink",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": {
@@ -148,11 +155,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blink.png"
   },
   {
+    "index": 7,
     "name": "Blink Hunter",
     "slug": "blinkhunter",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": {
@@ -172,11 +180,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blinkhunter.png"
   },
   {
+    "index": 8,
     "name": "Gunbot",
     "slug": "gunbot",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": {
@@ -196,11 +205,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/gunbot.png"
   },
   {
+    "index": 9,
     "name": "MissileBot",
     "slug": "missilebot",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": {
@@ -220,11 +230,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/missilebot.png"
   },
   {
+    "index": 10,
     "name": "Wasp",
     "slug": "wasp",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": true,
     "ability": null,
@@ -239,11 +250,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/wasp.png"
   },
   {
+    "index": 11,
     "name": "Hornet",
     "slug": "hornet",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -258,11 +270,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hornet.png"
   },
   {
+    "index": 12,
     "name": "Ballista",
     "slug": "ballista",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": null,
@@ -277,11 +290,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/ballista.png"
   },
   {
+    "index": 13,
     "name": "King Crab",
     "slug": "kingcrab",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": true,
     "ability": null,
@@ -296,11 +310,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kingcrab.png"
   },
   {
+    "index": 14,
     "name": "Crusader",
     "slug": "crusader",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": true,
     "ability": null,
@@ -315,11 +330,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crusader.png"
   },
   {
+    "index": 15,
     "name": "Bomber",
     "slug": "bomber",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": null,
@@ -334,11 +350,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bomber.png"
   },
   {
+    "index": 16,
     "name": "Shocker",
     "slug": "shocker",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": null,
@@ -353,11 +370,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/shocker.png"
   },
   {
+    "index": 17,
     "name": "Recall Shocker",
     "slug": "recallshocker",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": {
@@ -377,11 +395,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallshocker.png"
   },
   {
+    "index": 18,
     "name": "Mortar",
     "slug": "mortar",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": {
@@ -401,11 +420,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mortar.png"
   },
   {
+    "index": 19,
     "name": "Swift Shocker",
     "slug": "swiftshocker",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": null,
@@ -420,11 +440,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/swiftshocker.png"
   },
   {
+    "index": 20,
     "name": "Heavy Hunter",
     "slug": "heavyhunter",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -439,11 +460,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png"
   },
   {
+    "index": 21,
     "name": "Destroyer",
     "slug": "destroyer",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -458,11 +480,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/destroyer.png"
   },
   {
+    "index": 22,
     "name": "Raider",
     "slug": "raider",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -477,11 +500,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/raider.png"
   },
   {
+    "index": 23,
     "name": "Turret",
     "slug": "turret",
     "tech_tier": "Foundry",
     "air_ground": "Static",
-    "anti_air": false,
+    "attack_type": "Versatile",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -496,11 +520,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/turret.png"
   },
   {
+    "index": 24,
     "name": "Butterfly",
     "slug": "butterfly",
     "tech_tier": "Starforge",
     "air_ground": "Air",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -515,11 +540,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/butterfly.png"
   },
   {
+    "index": 25,
     "name": "Dragonfly",
     "slug": "dragonfly",
     "tech_tier": "Starforge",
     "air_ground": "Air",
-    "anti_air": false,
+    "attack_type": "Versatile",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -534,11 +560,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/dragonfly.png"
   },
   {
+    "index": 26,
     "name": "Falcon",
     "slug": "falcon",
     "tech_tier": "Starforge",
     "air_ground": "Air",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -553,11 +580,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/falcon.png"
   },
   {
+    "index": 27,
     "name": "Airship",
     "slug": "airship",
     "tech_tier": "Starforge",
     "air_ground": "Air",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -572,11 +600,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/airship.png"
   },
   {
+    "index": 28,
     "name": "Advanced Recall",
     "slug": "advancedrecall",
     "tech_tier": "Starforge",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": {
@@ -596,11 +625,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedrecall.png"
   },
   {
+    "index": 29,
     "name": "Mammoth",
     "slug": "mammoth",
     "tech_tier": "Starforge",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -615,11 +645,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mammoth.png"
   },
   {
+    "index": 30,
     "name": "Stinger",
     "slug": "stinger",
     "tech_tier": "Starforge",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -634,11 +665,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/stinger.png"
   },
   {
+    "index": 31,
     "name": "Heavy Turret",
     "slug": "heavyturret",
     "tech_tier": "Starforge",
     "air_ground": "Static",
-    "anti_air": false,
+    "attack_type": "Versatile",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -653,11 +685,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyturret.png"
   },
   {
+    "index": 32,
     "name": "Heavy Ballista",
     "slug": "heavyballista",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": true,
     "melee": false,
     "ability": null,
@@ -672,11 +705,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyballista.png"
   },
   {
+    "index": 33,
     "name": "Predator",
     "slug": "predator",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": true,
     "melee": false,
     "ability": null,
@@ -691,11 +725,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/predator.png"
   },
   {
+    "index": 34,
     "name": "Bulwark",
     "slug": "bulwark",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
-    "anti_air": false,
+    "attack_type": "Versatile",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -710,11 +745,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bulwark.png"
   },
   {
+    "index": 35,
     "name": "Katbus",
     "slug": "katbus",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
-    "anti_air": false,
+    "attack_type": "Ground",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -729,11 +765,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/katbus.png"
   },
   {
+    "index": 36,
     "name": "Locust",
     "slug": "locust",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
-    "anti_air": false,
+    "attack_type": "Versatile",
     "splash": false,
     "melee": false,
     "ability": null,
@@ -748,11 +785,12 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/locust.png"
   },
   {
+    "index": 37,
     "name": "Valkyrie",
     "slug": "valkyrie",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
-    "anti_air": true,
+    "attack_type": "Anti-Air",
     "splash": false,
     "melee": false,
     "ability": null,
