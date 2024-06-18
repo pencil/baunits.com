@@ -95,6 +95,7 @@ export default function Home() {
         render: (unit: Unit) => (
           <div className="bg-gradient-to-b from-blue-900 to-slate-800 bg-opacity-40 w-9 h-9 p-1 flex justify-center items-center">
             <Image
+              unoptimized
               src={`/icons/${unit.slug}.png`}
               alt={unit.name}
               title={unit.name}
