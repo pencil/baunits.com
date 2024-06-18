@@ -378,7 +378,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-visible-screen text-sm md:text-base">
-      <div className="flex-grow overflow-auto">
+      <div
+        className="flex-grow overflow-auto"
+        style={{
+          // Fix scrollbar hidden behind sticky header in Safari on iOS
+          WebkitTransform: "translateZ(0)",
+        }}
+      >
         <main className="min-h-visible-screen">
           <table className="relative w-full">
             <thead className="text-left">
