@@ -92,6 +92,7 @@ export default function Home() {
     () => [
       {
         name: "",
+        classNames: "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]",
         render: (unit: Unit) => (
           <div className="bg-gradient-to-b from-blue-900 to-slate-800 bg-opacity-40 w-9 h-9 p-1 flex justify-center items-center">
             <Image
@@ -108,6 +109,7 @@ export default function Home() {
       {
         name: "Name",
         key: "name",
+        classNames: "w-32 min-w-32 max-w-32 md:w-44 md:min-w-44 md:max-w-44",
         render: (unit: Unit) => (
           <ExternalLink href={unit.page_url}>{unit.name}</ExternalLink>
         ),
@@ -121,6 +123,7 @@ export default function Home() {
         name: "Tech Tier",
         key: "tech_tier",
         sort_key: "index",
+        classNames: "w-36 min-w-36 max-w-36 md:w-44 md:min-w-44 md:max-w-44",
         render: (unit: Unit) => unit.tech_tier,
         filter: {
           type: "select",
@@ -132,6 +135,7 @@ export default function Home() {
       {
         name: "Air/Ground",
         key: "air_ground",
+        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
         render: (unit: Unit) => unit.air_ground,
         filter: {
           type: "select",
@@ -165,6 +169,7 @@ export default function Home() {
       {
         name: "Ability",
         key: "ability",
+        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
         render: (unit: Unit) =>
           unit.ability ? (
             <div title={unit.ability.description}>{unit.ability.name}</div>
@@ -382,9 +387,7 @@ export default function Home() {
                   key={column.name}
                   className={classNames(
                     "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top",
-                    idx === 0
-                      ? "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]"
-                      : ""
+                    column.classNames
                   )}
                 >
                   <div className="flex flex-col">
