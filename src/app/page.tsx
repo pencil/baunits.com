@@ -378,7 +378,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-visible-screen text-sm md:text-base">
-      <div className="flex-grow overflow-auto xl:px-2">
+      <div className="flex-grow overflow-auto">
         <main className="min-h-visible-screen">
           <table className="relative w-full">
             <thead className="text-left">
