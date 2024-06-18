@@ -377,89 +377,91 @@ export default function Home() {
   );
 
   return (
-    <div className="flex flex-col h-screen text-sm md:text-base">
+    <div className="flex flex-col h-visible-screen text-sm md:text-base">
       <div className="flex-grow overflow-auto xl:px-2">
-        <table className="relative w-full">
-          <thead className="text-left">
-            <tr>
-              {columns.map((column, idx) => (
-                <th
-                  key={column.name}
-                  className={classNames(
-                    "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top",
-                    column.classNames
-                  )}
-                >
-                  <div className="flex flex-col">
-                    {column.sortable ? (
-                      <button
-                        className="flex items-center"
-                        onClick={() =>
-                          setSort((prev) =>
-                            prev?.key === (column.sort_key || column.key)
-                              ? !prev.asc
-                                ? null
+        <main className="min-h-visible-screen">
+          <table className="relative w-full">
+            <thead className="text-left">
+              <tr>
+                {columns.map((column, idx) => (
+                  <th
+                    key={column.name}
+                    className={classNames(
+                      "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top",
+                      column.classNames
+                    )}
+                  >
+                    <div className="flex flex-col">
+                      {column.sortable ? (
+                        <button
+                          className="flex items-center"
+                          onClick={() =>
+                            setSort((prev) =>
+                              prev?.key === (column.sort_key || column.key)
+                                ? !prev.asc
+                                  ? null
+                                  : {
+                                      key: (column.sort_key ||
+                                        column.key) as keyof Unit,
+                                      asc: !prev.asc,
+                                    }
                                 : {
                                     key: (column.sort_key ||
                                       column.key) as keyof Unit,
-                                    asc: !prev.asc,
+                                    asc: true,
                                   }
-                              : {
-                                  key: (column.sort_key ||
-                                    column.key) as keyof Unit,
-                                  asc: true,
-                                }
-                          )
-                        }
-                      >
+                            )
+                          }
+                        >
+                          <div className="whitespace-nowrap">{column.name}</div>
+                          {sort?.key === (column.sort_key || column.key) && (
+                            <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
+                          )}
+                        </button>
+                      ) : (
                         <div className="whitespace-nowrap">{column.name}</div>
-                        {sort?.key === (column.sort_key || column.key) && (
-                          <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
-                        )}
-                      </button>
-                    ) : (
-                      <div className="whitespace-nowrap">{column.name}</div>
-                    )}
-                    <div>
-                      {column.filter &&
-                        renderFilter(column.name, column.filter as Filter)}
-                    </div>
-                  </div>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="divide-y">
-            {filteredUnits.length > 0 ? (
-              filteredUnits.map((unit) => (
-                <tr
-                  key={unit.slug}
-                  className="hover:bg-slate-100 dark:hover:bg-slate-900 z-0"
-                >
-                  {columns.map((column, idx) => (
-                    <td
-                      key={column.name}
-                      className={classNames(
-                        "px-2 py-px md:py-2 whitespace-nowrap",
-                        idx === 0
-                          ? "sticky left-0 bg-slate-200 dark:bg-slate-800 text-center"
-                          : ""
                       )}
-                    >
-                      {column.render(unit)}
-                    </td>
-                  ))}
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan={columns.length} className="text-center py-4">
-                  No units found
-                </td>
+                      <div>
+                        {column.filter &&
+                          renderFilter(column.name, column.filter as Filter)}
+                      </div>
+                    </div>
+                  </th>
+                ))}
               </tr>
-            )}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y">
+              {filteredUnits.length > 0 ? (
+                filteredUnits.map((unit) => (
+                  <tr
+                    key={unit.slug}
+                    className="hover:bg-slate-100 dark:hover:bg-slate-900 z-0"
+                  >
+                    {columns.map((column, idx) => (
+                      <td
+                        key={column.name}
+                        className={classNames(
+                          "px-2 py-px md:py-2 whitespace-nowrap",
+                          idx === 0
+                            ? "sticky left-0 bg-slate-200 dark:bg-slate-800 text-center"
+                            : ""
+                        )}
+                      >
+                        {column.render(unit)}
+                      </td>
+                    ))}
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={columns.length} className="text-center py-4">
+                    No units found
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </main>
         <footer className="p-2 text-sm text-slate-600 dark:text-slate-400 flex flex-col gap-y-4">
           <p>
             BAUnits.com is a fan-made website for the game Battle Aces by

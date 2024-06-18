@@ -2,7 +2,6 @@
 const config = {
   plugins: {
     tailwindcss: {},
-    "postcss-100vh-fix": {},
   },
 };
 

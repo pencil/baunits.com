@@ -31,3 +31,20 @@ body {
     text-wrap: balance;
   }
 }
+
+.h-visible-screen {
+  height: 100vh;
+}
+
+.min-h-visible-screen {
+  min-height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  .h-visible-screen {
+    height: 100dvh;
+  }
+  .min-h-visible-screen {
+    min-height: 100dvh;
+  }
+}
