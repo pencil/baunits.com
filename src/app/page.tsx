@@ -372,7 +372,7 @@ export default function Home() {
   );
 
   return (
-    <main className="flex flex-col h-screen">
+    <main className="flex flex-col h-screen text-sm md:text-base">
       <div className="flex-grow overflow-auto xl:px-2">
         <table className="relative w-full">
           <thead className="text-left">
@@ -382,7 +382,9 @@ export default function Home() {
                   key={column.name}
                   className={classNames(
                     "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top",
-                    idx === 0 ? "min-w-14 max-w-14 w-14" : ""
+                    idx === 0
+                      ? "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]"
+                      : ""
                   )}
                 >
                   <div className="flex flex-col">
@@ -435,7 +437,7 @@ export default function Home() {
                     <td
                       key={column.name}
                       className={classNames(
-                        "px-2 py-2",
+                        "px-2 py-px md:py-2 whitespace-nowrap",
                         idx === 0
                           ? "sticky left-0 bg-slate-200 dark:bg-slate-800 text-center"
                           : ""
