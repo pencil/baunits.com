@@ -377,7 +377,7 @@ export default function Home() {
   );
 
   return (
-    <main className="flex flex-col h-screen text-sm md:text-base">
+    <div className="flex flex-col h-screen text-sm md:text-base">
       <div className="flex-grow overflow-auto xl:px-2">
         <table className="relative w-full">
           <thead className="text-left">
@@ -460,16 +460,33 @@ export default function Home() {
             )}
           </tbody>
         </table>
-        <div className="p-2 text-center text-sm text-slate-600 dark:text-slate-400">
-          Battle Aces is a trademark, and Uncapped Games is a trademark in the
-          EU and other Countries. This site is not affiliated with or endorsed
-          by Battle Aces or Uncapped Games. Data and images sourced from the{" "}
-          <ExternalLink href="https://www.playbattleaces.com/units">
-            official Battle Aces website
-          </ExternalLink>
-          .
-        </div>
+        <footer className="p-2 text-sm text-slate-600 dark:text-slate-400 flex flex-col gap-y-4">
+          <p>
+            BAUnits.com is a fan-made website for the game Battle Aces by
+            Uncapped Games. You can help improve this site by contributing on{" "}
+            <ExternalLink href="https://github.com/pencil/baunits.com">
+              GitHub
+            </ExternalLink>
+            .
+          </p>
+          <p>
+            Server hosting provided by{" "}
+            <ExternalLink href="https://www.smartinary.com">
+              Smartinary
+            </ExternalLink>
+            .
+          </p>
+          <p>
+            Battle Aces and Uncapped Games are trademarks in the EU and other
+            Countries. This site is not affiliated with or endorsed by Battle
+            Aces or Uncapped Games. Data and images sourced from the{" "}
+            <ExternalLink href="https://www.playbattleaces.com/units">
+              official Battle Aces website
+            </ExternalLink>
+            .
+          </p>
+        </footer>
       </div>
-    </main>
+    </div>
   );
 }
