@@ -726,6 +726,31 @@
   },
   {
     "index": 34,
+    "name": "Assaultbot",
+    "slug": "assaultbot",
+    "tech_tier": "Advanced Foundry",
+    "air_ground": "Ground",
+    "attack_type": "Ground",
+    "splash": false,
+    "melee": false,
+    "ability": {
+      "name": "Overclock",
+      "slug": "overclock",
+      "description": "Temporarily increases movement and attack speed.",
+      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+    },
+    "health": 1,
+    "damage": 2,
+    "speed": 2,
+    "range": 2,
+    "matter": 50,
+    "energy": 0,
+    "bandwidth": 1,
+    "page_url": "https://www.playbattleaces.com/units/assaultbot",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png"
+  },
+  {
+    "index": 35,
     "name": "Bulwark",
     "slug": "bulwark",
     "tech_tier": "Advanced Starforge",
@@ -745,7 +770,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bulwark.png"
   },
   {
-    "index": 35,
+    "index": 36,
     "name": "Katbus",
     "slug": "katbus",
     "tech_tier": "Advanced Starforge",
@@ -765,7 +790,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/katbus.png"
   },
   {
-    "index": 36,
+    "index": 37,
     "name": "Locust",
     "slug": "locust",
     "tech_tier": "Advanced Starforge",
@@ -785,7 +810,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/locust.png"
   },
   {
-    "index": 37,
+    "index": 38,
     "name": "Valkyrie",
     "slug": "valkyrie",
     "tech_tier": "Advanced Starforge",
