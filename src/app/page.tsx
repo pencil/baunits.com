@@ -17,10 +17,16 @@ const renderBars = (value: number, max = 5) => (
   <Tooltip tooltip={`${value}/${max}`}>
     <div className="flex" aria-label={`${value} out of ${max}`}>
       {[...Array(value)].map((_, i) => (
-        <div key={i} className="w-3 h-3 bg-blue-600 dark:bg-blue-200 mr-1" />
+        <div
+          key={i}
+          className="w-2 h-2 md:w-3 md:h-3 bg-blue-600 dark:bg-blue-200 mr-1"
+        />
       ))}
       {[...Array(max - value)].map((_, i) => (
-        <div key={i} className="w-3 h-3 bg-slate-200 dark:bg-slate-600 mr-1" />
+        <div
+          key={i}
+          className="w-2 h-2 md:w-3 md:h-3 bg-slate-200 dark:bg-slate-600 mr-1"
+        />
       ))}
     </div>
   </Tooltip>
@@ -103,7 +109,7 @@ export default function Home() {
     () => [
       {
         name: "",
-        classNames: "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]",
+        classNames: "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]C",
         render: (unit: Unit) => (
           <div className="bg-gradient-to-b from-blue-900 to-slate-800 bg-opacity-40 w-9 h-9 p-1 flex justify-center items-center">
             <Image
@@ -257,6 +263,7 @@ export default function Home() {
         //   val: (unit: Unit) => unit.matter,
         // },
         sortable: true,
+        numeric: true,
       },
       {
         name: "Energy",
@@ -270,6 +277,7 @@ export default function Home() {
         //   val: (unit: Unit) => unit.energy,
         // },
         sortable: true,
+        numeric: true,
       },
       {
         name: "Bandwidth",
@@ -283,6 +291,7 @@ export default function Home() {
         //   val: (unit: Unit) => unit.bandwidth,
         // },
         sortable: true,
+        numeric: true,
       },
     ],
     []
@@ -310,7 +319,7 @@ export default function Home() {
         return (
           <input
             type="number"
-            className="w-20 px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs"
+            className="w-16 md:w-20 px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs"
             placeholder="Min"
             min={f.min}
             max={f.max}
@@ -391,7 +400,7 @@ export default function Home() {
   );
 
   return (
-    <div className="flex flex-col h-visible-screen text-sm md:text-base">
+    <div className="flex flex-col h-visible-screen text-sm md:text-base max-w-screen-2xl mx-auto">
       <div
         className="flex-grow overflow-auto"
         style={{
@@ -414,7 +423,10 @@ export default function Home() {
                     <div className="flex flex-col">
                       {column.sortable ? (
                         <button
-                          className="flex items-center"
+                          className={classNames(
+                            "flex items-center",
+                            column.numeric ? "justify-end" : "justify-start"
+                          )}
                           onClick={() =>
                             setSort((prev) =>
                               prev?.key === (column.sort_key || column.key)
