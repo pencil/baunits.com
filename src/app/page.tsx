@@ -1,6 +1,8 @@
 "use client";
 
 import ExternalLink from "@/components/ExternalLink";
+import TextTooltip from "@/components/TextTooltip";
+import Tooltip from "@/components/Tooltip";
 import units from "@/data/units.json";
 import classNames from "@/helpers/classNames";
 import Image from "next/image";
@@ -12,18 +14,16 @@ const renderBoolean = (value: boolean) => (
   <div aria-label={value ? "Yes" : "No"}>{value ? "✅" : "❌"}</div>
 );
 const renderBars = (value: number, max = 5) => (
-  <div
-    className="flex"
-    aria-label={`${value} out of ${max}`}
-    title={`${value}/${max}`}
-  >
-    {[...Array(value)].map((_, i) => (
-      <div key={i} className="w-3 h-3 bg-blue-600 dark:bg-blue-200 mr-1" />
-    ))}
-    {[...Array(max - value)].map((_, i) => (
-      <div key={i} className="w-3 h-3 bg-slate-200 dark:bg-slate-600 mr-1" />
-    ))}
-  </div>
+  <Tooltip tooltip={`${value}/${max}`}>
+    <div className="flex" aria-label={`${value} out of ${max}`}>
+      {[...Array(value)].map((_, i) => (
+        <div key={i} className="w-3 h-3 bg-blue-600 dark:bg-blue-200 mr-1" />
+      ))}
+      {[...Array(max - value)].map((_, i) => (
+        <div key={i} className="w-3 h-3 bg-slate-200 dark:bg-slate-600 mr-1" />
+      ))}
+    </div>
+  </Tooltip>
 );
 const renderResource = (value: number) => (
   <div className="w-full text-right">{value}</div>
@@ -32,39 +32,27 @@ const renderAttackType = (value: string) => {
   switch (value) {
     case "Anti-Air":
       return (
-        <span
-          title="This unit is most effective against air units."
-          className="md:underline decoration-dotted"
-        >
+        <TextTooltip tooltip="This unit is most effective against air units.">
           Anti-Air
-        </span>
+        </TextTooltip>
       );
     case "Anti-Worker":
       return (
-        <span
-          title="This unit is can only attack worker units."
-          className="md:underline decoration-dotted"
-        >
+        <TextTooltip tooltip="This unit is can only attack workers.">
           Anti-Worker
-        </span>
+        </TextTooltip>
       );
     case "Ground":
       return (
-        <span
-          title="This unit can only attack ground units."
-          className="md:underline decoration-dotted"
-        >
+        <TextTooltip tooltip="This unit can only attack ground units.">
           Ground
-        </span>
+        </TextTooltip>
       );
     case "Versatile":
       return (
-        <span
-          title="This unit is effective against both air and ground units."
-          className="md:underline decoration-dotted"
-        >
+        <TextTooltip tooltip="This unit is effective against both air and ground units.">
           Versatile
-        </span>
+        </TextTooltip>
       );
     default:
       return value;
@@ -196,7 +184,9 @@ export default function Home() {
         classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
         render: (unit: Unit) =>
           unit.ability ? (
-            <div title={unit.ability.description}>{unit.ability.name}</div>
+            <TextTooltip tooltip={unit.ability.description}>
+              {unit.ability.name}
+            </TextTooltip>
           ) : null,
         filter: {
           type: "string",
@@ -417,7 +407,7 @@ export default function Home() {
                   <th
                     key={column.name}
                     className={classNames(
-                      "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-10 align-top",
+                      "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-30 align-top",
                       column.classNames
                     )}
                   >
@@ -473,7 +463,7 @@ export default function Home() {
                         className={classNames(
                           "px-2 py-px md:py-2 whitespace-nowrap",
                           idx === 0
-                            ? "sticky left-0 bg-slate-200 dark:bg-slate-800 text-center"
+                            ? "sticky z-20 left-0 bg-slate-200 dark:bg-slate-800 text-center"
                             : ""
                         )}
                       >
