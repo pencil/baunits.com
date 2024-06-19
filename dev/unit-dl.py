@@ -15,21 +15,20 @@ JSON = True
 ICONS = True
 
 
-def get_page_bytes(url):
+def get_page_bytes(url) -> bytes:
     with urllib.request.urlopen(url) as response:
         return response.read()
 
 
-def get_page_string(url):
+def get_page_string(url) -> str:
     return get_page_bytes(url).decode("utf-8")
 
 
 # Download the page and extract JSON from <script id="__NEXT_DATA__" ...>
-def get_page_json(url):
+def get_page_json(url) -> dict:
     page = get_page_string(url)
-    page_json = page.split('<script id="__NEXT_DATA__" type="application/json">')[
-        1
-    ].split("</script>")[0]
+    sep1, sep2 = '<script id="__NEXT_DATA__" type="application/json">', "</script>"
+    page_json = page.split(sep1)[1].split(sep2)[0]
     return json.loads(page_json)
 
 
