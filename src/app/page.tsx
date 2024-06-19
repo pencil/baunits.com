@@ -132,7 +132,7 @@ export default function Home() {
       {
         name: "Name",
         key: "name",
-        classNames: "w-32 min-w-32 max-w-32 md:w-44 md:min-w-44 md:max-w-44",
+        classNames: "w-32 min-w-32 max-w-32 md:w-40 md:min-w-40 md:max-w-40",
         render: (unit: Unit) => (
           <ExternalLink href={unit.page_url}>{unit.name}</ExternalLink>
         ),
