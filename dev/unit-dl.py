@@ -38,6 +38,8 @@ def extract_attack_type(tag: str) -> str:
         return "Anti-Air"
     elif tag.startswith("Versatile"):
         return "Versatile"
+    elif tag.startswith("Anti-Worker"):
+        return "Anti-Worker"
     return "Ground"
 
 

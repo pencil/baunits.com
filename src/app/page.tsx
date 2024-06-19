@@ -28,23 +28,46 @@ const renderBars = (value: number, max = 5) => (
 const renderResource = (value: number) => (
   <div className="w-full text-right">{value}</div>
 );
-const renderAntiAir = (value: string) => {
-  if (value === "Anti-Air") {
-    return (
-      <span title="Anti-Air: This unit is most effective against air units">
-        ✅
-      </span>
-    );
-  } else if (value === "Versatile") {
-    return (
-      <span title="Versatile: This unit is effective against both air and ground units">
-        ⭐️
-      </span>
-    );
-  } else {
-    return (
-      <span title="Ground: This unit can only attack ground units">❌</span>
-    );
+const renderAttackType = (value: string) => {
+  switch (value) {
+    case "Anti-Air":
+      return (
+        <span
+          title="This unit is most effective against air units."
+          className="md:underline decoration-dotted"
+        >
+          Anti-Air
+        </span>
+      );
+    case "Anti-Worker":
+      return (
+        <span
+          title="This unit is can only attack worker units."
+          className="md:underline decoration-dotted"
+        >
+          Anti-Worker
+        </span>
+      );
+    case "Ground":
+      return (
+        <span
+          title="This unit can only attack ground units."
+          className="md:underline decoration-dotted"
+        >
+          Ground
+        </span>
+      );
+    case "Versatile":
+      return (
+        <span
+          title="This unit is effective against both air and ground units."
+          className="md:underline decoration-dotted"
+        >
+          Versatile
+        </span>
+      );
+    default:
+      return value;
   }
 };
 
@@ -133,9 +156,9 @@ export default function Home() {
         sortable: true,
       },
       {
-        name: "Air/Ground",
+        name: "Type",
         key: "air_ground",
-        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
+        classNames: "w-20 min-w-20 max-w-20 md:w-28 md:min-w-28 md:max-w-28",
         render: (unit: Unit) => unit.air_ground,
         filter: {
           type: "select",
@@ -145,9 +168,10 @@ export default function Home() {
         sortable: true,
       },
       {
-        name: "Anti-Air?",
-        key: "anti_air",
-        render: (unit: Unit) => renderAntiAir(unit.attack_type),
+        name: "Attacks",
+        key: "attack_type",
+        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
+        render: (unit: Unit) => renderAttackType(unit.attack_type),
         filter: {
           type: "select",
           options: uniqueArray(units.map((unit) => unit.attack_type)),

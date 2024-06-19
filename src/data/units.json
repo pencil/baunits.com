@@ -485,7 +485,7 @@
     "slug": "raider",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "attack_type": "Ground",
+    "attack_type": "Anti-Worker",
     "splash": false,
     "melee": false,
     "ability": null,
