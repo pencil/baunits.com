@@ -746,6 +746,31 @@
   },
   {
     "index": 35,
+    "name": "Advanced Blink",
+    "slug": "advancedblink",
+    "tech_tier": "Advanced Foundry",
+    "air_ground": "Ground",
+    "attack_type": "Versatile",
+    "splash": false,
+    "melee": false,
+    "ability": {
+      "name": "Blink",
+      "slug": "blink",
+      "description": "Teleports a short distance towards a target location.",
+      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/blink.png"
+    },
+    "health": 4,
+    "damage": 2,
+    "speed": 3,
+    "range": 2,
+    "matter": 50,
+    "energy": 50,
+    "bandwidth": 2,
+    "page_url": "https://www.playbattleaces.com/units/advancedblink",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedblink.png"
+  },
+  {
+    "index": 36,
     "name": "Assaultbot",
     "slug": "assaultbot",
     "tech_tier": "Advanced Foundry",
@@ -770,7 +795,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png"
   },
   {
-    "index": 36,
+    "index": 37,
     "name": "Behemoth",
     "slug": "behemoth",
     "tech_tier": "Advanced Foundry",
@@ -790,7 +815,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/behemoth.png"
   },
   {
-    "index": 37,
+    "index": 38,
     "name": "Bulwark",
     "slug": "bulwark",
     "tech_tier": "Advanced Starforge",
@@ -810,7 +835,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bulwark.png"
   },
   {
-    "index": 38,
+    "index": 39,
     "name": "Katbus",
     "slug": "katbus",
     "tech_tier": "Advanced Starforge",
@@ -830,7 +855,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/katbus.png"
   },
   {
-    "index": 39,
+    "index": 40,
     "name": "Locust",
     "slug": "locust",
     "tech_tier": "Advanced Starforge",
@@ -850,7 +875,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/locust.png"
   },
   {
-    "index": 40,
+    "index": 41,
     "name": "Valkyrie",
     "slug": "valkyrie",
     "tech_tier": "Advanced Starforge",
