@@ -304,7 +304,7 @@ export default function Home() {
         return (
           <input
             type="text"
-            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs"
+            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs font-normal"
             placeholder="Search"
             onChange={(e) =>
               setFilters((prev) => ({
@@ -320,7 +320,7 @@ export default function Home() {
         return (
           <input
             type="number"
-            className="w-16 md:w-20 px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs"
+            className="w-16 md:w-20 px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs font-normal"
             placeholder="Min"
             min={f.min}
             max={f.max}
@@ -337,7 +337,7 @@ export default function Home() {
       case "boolean":
         return (
           <select
-            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs"
+            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs font-normal"
             onChange={(e) =>
               setFilters((prev) => ({
                 ...prev,
@@ -355,7 +355,7 @@ export default function Home() {
       case "select":
         return (
           <select
-            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs"
+            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs font-normal"
             onChange={(e) =>
               setFilters((prev) => ({
                 ...prev,
@@ -414,7 +414,7 @@ export default function Home() {
                     column.classNames
                   )}
                 >
-                  <div className="flex flex-col">
+                  <div className="flex flex-col font-semibold">
                     {column.sortable ? (
                       <button
                         className={classNames(

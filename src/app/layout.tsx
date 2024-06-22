@@ -1,13 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
+const font = Roboto_Flex({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Battle Aces Units",
@@ -29,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
