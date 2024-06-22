@@ -6,7 +6,7 @@ type Props = {
 };
 export default function TextTooltip({ children, tooltip }: Props) {
   return (
-    <Tooltip tooltip={tooltip}>
+    <Tooltip tooltip={tooltip} position="bottom">
       <span className="underline decoration-dotted">{children}</span>
     </Tooltip>
   );

@@ -14,7 +14,7 @@ const renderBoolean = (value: boolean) => (
   <div aria-label={value ? "Yes" : "No"}>{value ? "✅" : "❌"}</div>
 );
 const renderBars = (value: number, max = 5) => (
-  <Tooltip tooltip={`${value}/${max}`}>
+  <Tooltip tooltip={`${value}/${max}`} position="bottom">
     <div className="flex" aria-label={`${value} out of ${max}`}>
       {[...Array(value)].map((_, i) => (
         <div
@@ -109,18 +109,19 @@ export default function Home() {
     () => [
       {
         name: "",
-        classNames: "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]C",
+        classNames: "w-[3.25rem] min-w-[3.25rem] max-w-[3.25rem]",
         render: (unit: Unit) => (
-          <div className="bg-gradient-to-b from-blue-900 to-slate-800 bg-opacity-40 w-9 h-9 p-1 flex justify-center items-center">
-            <Image
-              unoptimized
-              src={`/icons/${unit.slug}.png`}
-              alt={unit.name}
-              title={unit.name}
-              width={32}
-              height={32}
-            />
-          </div>
+          <Tooltip tooltip={unit.name} position="right">
+            <div className="bg-gradient-to-b from-blue-900 to-slate-800 bg-opacity-40 w-9 h-9 p-1 flex justify-center items-center">
+              <Image
+                unoptimized
+                src={`/icons/${unit.slug}.png`}
+                alt={unit.name}
+                width={32}
+                height={32}
+              />
+            </div>
+          </Tooltip>
         ),
       },
       {
@@ -152,7 +153,7 @@ export default function Home() {
       {
         name: "Type",
         key: "air_ground",
-        classNames: "w-20 min-w-20 max-w-20 md:w-28 md:min-w-28 md:max-w-28",
+        classNames: "w-20 min-w-20 max-w-20 md:w-24 md:min-w-24 md:max-w-24",
         render: (unit: Unit) => unit.air_ground,
         filter: {
           type: "select",
@@ -187,7 +188,7 @@ export default function Home() {
       {
         name: "Ability",
         key: "ability",
-        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
+        classNames: "w-24 min-w-24 md:w-28 md:min-w-28 md:max-w-28",
         render: (unit: Unit) =>
           unit.ability ? (
             <TextTooltip tooltip={unit.ability.description}>
@@ -400,127 +401,119 @@ export default function Home() {
   );
 
   return (
-    <div className="flex flex-col h-visible-screen text-sm md:text-base max-w-screen-2xl mx-auto">
-      <div
-        className="flex-grow overflow-auto"
-        style={{
-          // Fix scrollbar hidden behind sticky header in Safari on iOS
-          WebkitTransform: "translateZ(0)",
-        }}
-      >
-        <main className="min-h-visible-screen">
-          <table className="relative w-full">
-            <thead className="text-left">
-              <tr>
-                {columns.map((column, idx) => (
-                  <th
-                    key={column.name}
-                    className={classNames(
-                      "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-30 align-top",
-                      column.classNames
-                    )}
-                  >
-                    <div className="flex flex-col">
-                      {column.sortable ? (
-                        <button
-                          className={classNames(
-                            "flex items-center",
-                            column.numeric ? "justify-end" : "justify-start"
-                          )}
-                          onClick={() =>
-                            setSort((prev) =>
-                              prev?.key === (column.sort_key || column.key)
-                                ? !prev.asc
-                                  ? null
-                                  : {
-                                      key: (column.sort_key ||
-                                        column.key) as keyof Unit,
-                                      asc: !prev.asc,
-                                    }
+    <div className="flex flex-col text-sm md:text-base mx-auto items-center w-full max-w-screen-2xl">
+      <main className="min-h-visible-screen w-full">
+        <table className="relative w-full">
+          <thead className="text-left">
+            <tr>
+              {columns.map((column) => (
+                <th
+                  key={column.name}
+                  className={classNames(
+                    "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-40 align-top",
+                    column.classNames
+                  )}
+                >
+                  <div className="flex flex-col">
+                    {column.sortable ? (
+                      <button
+                        className={classNames(
+                          "flex items-center",
+                          column.numeric ? "justify-end" : "justify-start"
+                        )}
+                        onClick={() =>
+                          setSort((prev) =>
+                            prev?.key === (column.sort_key || column.key)
+                              ? !prev.asc
+                                ? null
                                 : {
                                     key: (column.sort_key ||
                                       column.key) as keyof Unit,
-                                    asc: true,
+                                    asc: !prev.asc,
                                   }
-                            )
-                          }
-                        >
-                          <div className="whitespace-nowrap">{column.name}</div>
-                          {sort?.key === (column.sort_key || column.key) && (
-                            <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
-                          )}
-                        </button>
-                      ) : (
-                        <div className="whitespace-nowrap">{column.name}</div>
-                      )}
-                      <div>
-                        {column.filter &&
-                          renderFilter(column.name, column.filter as Filter)}
-                      </div>
-                    </div>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y">
-              {filteredUnits.length > 0 ? (
-                filteredUnits.map((unit) => (
-                  <tr
-                    key={unit.slug}
-                    className="hover:bg-slate-100 dark:hover:bg-slate-900 z-0"
-                  >
-                    {columns.map((column, idx) => (
-                      <td
-                        key={column.name}
-                        className={classNames(
-                          "px-2 py-px md:py-2 whitespace-nowrap",
-                          idx === 0
-                            ? "sticky z-20 left-0 bg-slate-200 dark:bg-slate-800 text-center"
-                            : ""
-                        )}
+                              : {
+                                  key: (column.sort_key ||
+                                    column.key) as keyof Unit,
+                                  asc: true,
+                                }
+                          )
+                        }
                       >
-                        {column.render(unit)}
-                      </td>
-                    ))}
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={columns.length} className="text-center py-4">
-                    No units found
-                  </td>
+                        <div className="whitespace-nowrap">{column.name}</div>
+                        {sort?.key === (column.sort_key || column.key) && (
+                          <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
+                        )}
+                      </button>
+                    ) : (
+                      <div className="whitespace-nowrap">{column.name}</div>
+                    )}
+                    <div>
+                      {column.filter &&
+                        renderFilter(column.name, column.filter as Filter)}
+                    </div>
+                  </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y">
+            {filteredUnits.length > 0 ? (
+              filteredUnits.map((unit) => (
+                <tr
+                  key={unit.slug}
+                  className="hover:bg-slate-100 dark:hover:bg-slate-900 z-0"
+                >
+                  {columns.map((column, idx) => (
+                    <td
+                      key={column.name}
+                      className={classNames(
+                        "px-2 py-px md:py-2 whitespace-nowrap",
+                        idx === 0
+                          ? "sticky z-20 left-0 bg-slate-200 dark:bg-slate-800 text-center"
+                          : ""
+                      )}
+                    >
+                      {column.render(unit)}
+                    </td>
+                  ))}
                 </tr>
-              )}
-            </tbody>
-          </table>
-        </main>
-        <footer className="p-2 text-sm text-slate-600 dark:text-slate-400 flex flex-col gap-y-4">
-          <p>
-            BAUnits.com is a fan-made website for the game Battle Aces by
-            Uncapped Games. You can help improve this site by contributing on{" "}
-            <ExternalLink href="https://github.com/pencil/baunits.com">
-              GitHub
-            </ExternalLink>
-            .
-          </p>
-          <p>
-            Server hosting provided by{" "}
-            <ExternalLink href="https://www.smartinary.com">
-              Smartinary
-            </ExternalLink>
-            .
-          </p>
-          <p>
-            Battle Aces and Uncapped Games are trademarks in the EU and other
-            Countries. This site is not affiliated with or endorsed by Battle
-            Aces or Uncapped Games. Data and images sourced from the{" "}
-            <ExternalLink href="https://www.playbattleaces.com/units">
-              official Battle Aces website
-            </ExternalLink>
-            .
-          </p>
-        </footer>
-      </div>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={columns.length} className="text-center py-4">
+                  No units found
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </main>
+      <footer className="p-2 text-sm text-slate-600 dark:text-slate-400 flex flex-col gap-y-4 w-full">
+        <p>
+          BAUnits.com is a fan-made website for the game Battle Aces by Uncapped
+          Games. You can help improve this site by contributing on{" "}
+          <ExternalLink href="https://github.com/pencil/baunits.com">
+            GitHub
+          </ExternalLink>
+          .
+        </p>
+        <p>
+          Server hosting provided by{" "}
+          <ExternalLink href="https://www.smartinary.com">
+            Smartinary
+          </ExternalLink>
+          .
+        </p>
+        <p>
+          Battle Aces and Uncapped Games are trademarks in the EU and other
+          Countries. This site is not affiliated with or endorsed by Battle Aces
+          or Uncapped Games. Data and images sourced from the{" "}
+          <ExternalLink href="https://www.playbattleaces.com/units">
+            official Battle Aces website
+          </ExternalLink>
+          .
+        </p>
+      </footer>
     </div>
   );
 }
