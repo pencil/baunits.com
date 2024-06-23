@@ -913,5 +913,30 @@
     "bandwidth": 5,
     "page_url": "https://www.playbattleaces.com/units/artillery",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/artillery.png"
+  },
+  {
+    "index": 43,
+    "name": "Advancedbot",
+    "slug": "advancedbot",
+    "tech_tier": "Advanced Starforge",
+    "air_ground": "Ground",
+    "attack_type": "Versatile",
+    "splash": false,
+    "melee": false,
+    "ability": {
+      "name": "Overclock",
+      "slug": "overclock",
+      "description": "Temporarily increases movement and attack speed.",
+      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+    },
+    "health": 1,
+    "damage": 2,
+    "speed": 2,
+    "range": 2,
+    "matter": 50,
+    "energy": 0,
+    "bandwidth": 1,
+    "page_url": "https://www.playbattleaces.com/units/advancedbot",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedbot.png"
   }
 ]
