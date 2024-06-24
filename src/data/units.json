@@ -876,6 +876,26 @@
   },
   {
     "index": 41,
+    "name": "Kraken",
+    "slug": "kraken",
+    "tech_tier": "Advanced Starforge",
+    "air_ground": "Air",
+    "attack_type": "Versatile",
+    "splash": false,
+    "melee": false,
+    "ability": null,
+    "health": 5,
+    "damage": 5,
+    "speed": 2,
+    "range": 3,
+    "matter": 3000,
+    "energy": 3000,
+    "bandwidth": 80,
+    "page_url": "https://www.playbattleaces.com/units/kraken",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kraken.png"
+  },
+  {
+    "index": 42,
     "name": "Valkyrie",
     "slug": "valkyrie",
     "tech_tier": "Advanced Starforge",
@@ -895,7 +915,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/valkyrie.png"
   },
   {
-    "index": 42,
+    "index": 43,
     "name": "Artillery",
     "slug": "artillery",
     "tech_tier": "Advanced Starforge",
@@ -915,7 +935,7 @@
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/artillery.png"
   },
   {
-    "index": 43,
+    "index": 44,
     "name": "Advancedbot",
     "slug": "advancedbot",
     "tech_tier": "Advanced Starforge",
