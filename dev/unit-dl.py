@@ -2,6 +2,7 @@ import os
 import json
 import dataclasses
 import urllib.request
+import datetime
 
 
 UNIT_PAGE_URL = "https://www.playbattleaces.com/units/{0}"
@@ -68,7 +69,7 @@ class Ability:
     icon_url: str
 
 
-@dataclasses.dataclass
+@dataclasses.dataclass(eq=False)
 class Unit:
     index: int
     name: str
@@ -88,6 +89,31 @@ class Unit:
     bandwidth: int
     page_url: str
     icon_url: str
+
+    def __eq__(self, other: "Unit") -> bool:
+        # Compare all fields except index
+        return all(
+            getattr(self, field.name) == getattr(other, field.name)
+            for field in dataclasses.fields(self)[1:]
+        )
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "Unit":
+        data["ability"] = Ability(**data["ability"]) if data["ability"] else None
+        return cls(**data)
+
+
+@dataclasses.dataclass
+class UnitChange:
+    before: Unit
+    after: Unit
+
+
+@dataclasses.dataclass
+class ChangeLog:
+    # Date in yyyy-mm-dd format
+    date: str
+    changes: list[UnitChange]
 
 
 def unit_from_json(unit: dict, index: int = 0) -> Unit:
@@ -206,9 +232,43 @@ if MD:
             )
 
 
+existing_units: list[Unit] = []
+if os.path.exists("src/data/units.json"):
+    with open("src/data/units.json", "r") as jsonfile:
+        existing_units = [Unit.from_dict(unit) for unit in json.load(jsonfile)]
+
 with open("src/data/units.json", "w+") as jsonfile:
     print(f"Writing {len(units)} units to src/data/units.json")
     json.dump([dataclasses.asdict(unit) for unit in units], jsonfile, indent=2)
+
+if existing_units:
+    existing_changelog: list[ChangeLog] = []
+    if os.path.exists("src/data/changelog.json"):
+        with open("src/data/changelog.json", "r") as jsonfile:
+            existing_changelog = json.load(jsonfile)
+
+    existing_units_by_slug = {unit.slug: unit for unit in existing_units}
+    unit_slugs = [unit.slug for unit in units]
+    unit_changes: list[UnitChange] = []
+    for unit in existing_units:
+        if unit.slug not in unit_slugs:
+            unit_changes.append(UnitChange(before=unit, after=None))
+    for unit in units:
+        if unit.slug not in existing_units_by_slug:
+            unit_changes.append(UnitChange(before=None, after=unit))
+        else:
+            existing_unit = existing_units_by_slug[unit.slug]
+            if unit != existing_unit:
+                unit_changes.append(UnitChange(before=existing_unit, after=unit))
+
+    if unit_changes:
+        changelog = ChangeLog(
+            date=datetime.date.today().isoformat(), changes=unit_changes
+        )
+        existing_changelog.append(dataclasses.asdict(changelog))
+        with open("src/data/changelog.json", "w+") as jsonfile:
+            print(f"Writing {len(unit_changes)} changes to src/data/changelog.json")
+            json.dump(existing_changelog, jsonfile, indent=2)
 
 # Download all icons to build/icons/
 os.makedirs("public/icons", exist_ok=True)
