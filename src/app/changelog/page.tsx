@@ -84,7 +84,7 @@ export default function ChangelogPage() {
   return (
     <div className="p-4 w-full max-w-screen-md mx-auto gap-y-2 flex flex-col">
       <h1 className="text-2xl font-semibold pb-2">Changelog</h1>
-      {changelog.map((entry) => (
+      {changelog.reverse().map((entry) => (
         <div
           key={entry.date}
           className="border rounded-lg p-4 mb-4 shadow-sm bg-slate-100 dark:bg-slate-950"
