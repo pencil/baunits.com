@@ -837,7 +837,7 @@
     "matter": 50,
     "energy": 50,
     "bandwidth": 2,
-    "war_credits": null,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/advancedblink",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedblink.png"
   },
