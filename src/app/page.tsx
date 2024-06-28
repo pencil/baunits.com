@@ -5,6 +5,9 @@ import TextTooltip from "@/components/TextTooltip";
 import Tooltip from "@/components/Tooltip";
 import units from "@/data/units.json";
 import classNames from "@/helpers/classNames";
+import Bandwidth from "@/icons/Bandwidth";
+import Energy from "@/icons/Energy";
+import Matter from "@/icons/Matter";
 import Image from "next/image";
 import { useCallback, useMemo, useState } from "react";
 
@@ -263,6 +266,7 @@ export default function Home() {
       },
       {
         name: "Matter",
+        header: <Matter className="w-5 h-5" />,
         key: "matter",
         render: (unit: Unit) => renderResource(unit.matter),
         // filter: {
@@ -277,6 +281,7 @@ export default function Home() {
       },
       {
         name: "Energy",
+        header: <Energy className="w-5 h-5" />,
         key: "energy",
         render: (unit: Unit) => renderResource(unit.energy),
         // filter: {
@@ -291,6 +296,7 @@ export default function Home() {
       },
       {
         name: "Bandwidth",
+        header: <Bandwidth className="w-5 h-5" />,
         key: "bandwidth",
         render: (unit: Unit) => renderResource(unit.bandwidth),
         // filter: {
@@ -446,13 +452,17 @@ export default function Home() {
                       )
                     }
                   >
-                    <div className="whitespace-nowrap">{column.name}</div>
+                    <div className="whitespace-nowrap">
+                      {column.header || column.name}
+                    </div>
                     {sort?.key === (column.sort_key || column.key) && (
                       <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
                     )}
                   </button>
                 ) : (
-                  <div className="whitespace-nowrap">{column.name}</div>
+                  <div className="whitespace-nowrap">
+                    {column.header || column.name}
+                  </div>
                 )}
                 <div>
                   {column.filter &&

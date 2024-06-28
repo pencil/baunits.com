@@ -27,8 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <div className="flex flex-col text-sm md:text-base mx-auto items-center max-w-screen-3xl">
-          <nav className="flex items-center h-10 fixed p-2 text-center w-full max-w-screen-3xl bg-slate-200 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-700">
+        <div className="flex flex-col text-sm md:text-base mx-auto items-center max-w-screen-2xl">
+          <nav className="flex items-center h-10 fixed p-2 text-center w-full max-w-screen-2xl bg-slate-200 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-700">
             <TabBar>
               <Tab href="/">Units</Tab>
               <Tab href="/changelog/">Changelog</Tab>
