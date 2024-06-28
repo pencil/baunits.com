@@ -22,7 +22,7 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
             <span className="font-semibold">{unit.after.name}</span>
             <ul className="list-disc list-inside ml-4">
               {Object.entries(unit.after).map(([key, value]) => {
-                if (key === "slug" || key === "name") {
+                if (key === "slug" || key === "name" || key === "ability") {
                   return null;
                 }
                 const valueBefore = unit.before[key as keyof typeof unit.after];
@@ -32,7 +32,8 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
 
                 return (
                   <li key={key}>
-                    {beautifyKey(key)}: {valueBefore} → {value}
+                    {beautifyKey(key)}:{" "}
+                    {valueBefore === null ? "?" : valueBefore} → {value}
                   </li>
                 );
               })}
