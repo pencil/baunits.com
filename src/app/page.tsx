@@ -174,6 +174,15 @@ export default function Home() {
         },
       },
       {
+        name: "Durable?",
+        key: "durable",
+        render: (unit: Unit) => renderBoolean(unit.armor_type === "Durable"),
+        filter: {
+          type: "boolean",
+          val: (unit: Unit) => unit.armor_type === "Durable",
+        },
+      },
+      {
         name: "Splash?",
         key: "splash",
         render: (unit: Unit) => renderBoolean(unit.splash),

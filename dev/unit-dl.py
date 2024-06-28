@@ -1,6 +1,7 @@
 import os
 import json
 import dataclasses
+from typing import Literal
 import urllib.request
 import datetime
 
@@ -14,6 +15,7 @@ CSV = False
 MD = False
 JSON = True
 ICONS = True
+CHANGELOG = True
 
 
 def get_page_bytes(url) -> bytes:
@@ -33,7 +35,9 @@ def get_page_json(url) -> dict:
     return json.loads(page_json)
 
 
-def extract_attack_type(tag: str) -> str:
+def extract_attack_type(
+    tag: str,
+) -> Literal["Ground", "Air", "Anti-Air", "Versatile", "Anti-Worker"]:
     if tag.startswith("Anti-Air"):
         return "Anti-Air"
     elif tag.startswith("Versatile"):
@@ -43,7 +47,13 @@ def extract_attack_type(tag: str) -> str:
     return "Ground"
 
 
-def extract_air_ground(tag: str) -> str:
+def extract_armor_type(tag: str) -> Literal["Normal", "Durable"]:
+    if " Durable " in tag:
+        return "Durable"
+    return "Normal"
+
+
+def extract_air_ground(tag: str) -> Literal["Air", "Ground", "Static", "?"]:
     if tag.endswith("Air Unit"):
         return "Air"
     elif tag.endswith("Ground Unit"):
@@ -77,6 +87,7 @@ class Unit:
     tech_tier: str
     air_ground: str
     attack_type: str
+    armor_type: str
     splash: bool
     melee: bool
     ability: Ability | None
@@ -125,6 +136,7 @@ def unit_from_json(unit: dict, index: int = 0) -> Unit:
         tech_tier=unit["techTier"]["name"],
         air_ground=extract_air_ground(unit["unitTag"]),
         attack_type=extract_attack_type(unit["unitTag"]),
+        armor_type=extract_armor_type(unit["unitTag"]),
         splash=extract_has_splash(unit["unitTag"]),
         melee=extract_is_melee(unit["unitTag"]),
         ability=Ability(
@@ -233,7 +245,7 @@ if MD:
 
 
 existing_units: list[Unit] = []
-if os.path.exists("src/data/units.json"):
+if CHANGELOG and os.path.exists("src/data/units.json"):
     with open("src/data/units.json", "r") as jsonfile:
         existing_units = [Unit.from_dict(unit) for unit in json.load(jsonfile)]
 
