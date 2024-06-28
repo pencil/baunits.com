@@ -314,7 +314,7 @@ export default function Home() {
       },
       {
         name: "War Credits",
-        header: "💵",
+        header: <span className="text-base">💰</span>,
         description: "War Credits required to unlock",
         key: "war_credits",
         render: (unit: Unit) => (
