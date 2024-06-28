@@ -17,6 +17,7 @@
     "matter": 100,
     "energy": 0,
     "bandwidth": 2,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/crab",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crab.png"
   },
@@ -38,6 +39,7 @@
     "matter": 75,
     "energy": 25,
     "bandwidth": 2,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/hunter",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hunter.png"
   },
@@ -64,6 +66,7 @@
     "matter": 100,
     "energy": 0,
     "bandwidth": 2,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/recall",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recall.png"
   },
@@ -90,6 +93,7 @@
     "matter": 75,
     "energy": 25,
     "bandwidth": 2,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/recallhunter",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallhunter.png"
   },
@@ -111,6 +115,7 @@
     "matter": 50,
     "energy": 0,
     "bandwidth": 1,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/scorpion",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/scorpion.png"
   },
@@ -132,6 +137,7 @@
     "matter": 75,
     "energy": 25,
     "bandwidth": 2,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/beetle",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/beetle.png"
   },
@@ -158,6 +164,7 @@
     "matter": 100,
     "energy": 0,
     "bandwidth": 2,
+    "war_credits": 200,
     "page_url": "https://www.playbattleaces.com/units/blink",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blink.png"
   },
@@ -184,6 +191,7 @@
     "matter": 75,
     "energy": 25,
     "bandwidth": 2,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/blinkhunter",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blinkhunter.png"
   },
@@ -210,6 +218,7 @@
     "matter": 50,
     "energy": 0,
     "bandwidth": 1,
+    "war_credits": 300,
     "page_url": "https://www.playbattleaces.com/units/gunbot",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/gunbot.png"
   },
@@ -236,6 +245,7 @@
     "matter": 75,
     "energy": 25,
     "bandwidth": 2,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/missilebot",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/missilebot.png"
   },
@@ -257,6 +267,7 @@
     "matter": 25,
     "energy": 0,
     "bandwidth": 1,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/wasp",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/wasp.png"
   },
@@ -278,6 +289,7 @@
     "matter": 75,
     "energy": 25,
     "bandwidth": 2,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/hornet",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hornet.png"
   },
@@ -299,6 +311,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/ballista",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/ballista.png"
   },
@@ -320,6 +333,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/kingcrab",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kingcrab.png"
   },
@@ -341,6 +355,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/crusader",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crusader.png"
   },
@@ -362,6 +377,7 @@
     "matter": 50,
     "energy": 50,
     "bandwidth": 2,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/bomber",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bomber.png"
   },
@@ -383,6 +399,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 300,
     "page_url": "https://www.playbattleaces.com/units/shocker",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/shocker.png"
   },
@@ -409,6 +426,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/recallshocker",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallshocker.png"
   },
@@ -435,6 +453,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/mortar",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mortar.png"
   },
@@ -456,6 +475,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/swiftshocker",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/swiftshocker.png"
   },
@@ -477,6 +497,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/heavyhunter",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png"
   },
@@ -498,6 +519,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/destroyer",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/destroyer.png"
   },
@@ -519,6 +541,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/raider",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/raider.png"
   },
@@ -540,6 +563,7 @@
     "matter": 100,
     "energy": 50,
     "bandwidth": 0,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/turret",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/turret.png"
   },
@@ -561,6 +585,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/butterfly",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/butterfly.png"
   },
@@ -582,6 +607,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/dragonfly",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/dragonfly.png"
   },
@@ -603,6 +629,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/falcon",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/falcon.png"
   },
@@ -624,6 +651,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/airship",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/airship.png"
   },
@@ -650,6 +678,7 @@
     "matter": 50,
     "energy": 50,
     "bandwidth": 2,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/advancedrecall",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedrecall.png"
   },
@@ -671,6 +700,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/mammoth",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mammoth.png"
   },
@@ -692,6 +722,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/stinger",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/stinger.png"
   },
@@ -713,6 +744,7 @@
     "matter": 200,
     "energy": 100,
     "bandwidth": 0,
+    "war_credits": 300,
     "page_url": "https://www.playbattleaces.com/units/heavyturret",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyturret.png"
   },
@@ -734,6 +766,7 @@
     "matter": 250,
     "energy": 250,
     "bandwidth": 10,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/heavyballista",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyballista.png"
   },
@@ -755,6 +788,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/predator",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/predator.png"
   },
@@ -776,6 +810,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/sniper",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/sniper.png"
   },
@@ -802,6 +837,7 @@
     "matter": 50,
     "energy": 50,
     "bandwidth": 2,
+    "war_credits": null,
     "page_url": "https://www.playbattleaces.com/units/advancedblink",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedblink.png"
   },
@@ -828,6 +864,7 @@
     "matter": 50,
     "energy": 0,
     "bandwidth": 1,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/assaultbot",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png"
   },
@@ -849,6 +886,7 @@
     "matter": 250,
     "energy": 0,
     "bandwidth": 5,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/behemoth",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/behemoth.png"
   },
@@ -870,6 +908,7 @@
     "matter": 250,
     "energy": 250,
     "bandwidth": 10,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/bulwark",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bulwark.png"
   },
@@ -891,6 +930,7 @@
     "matter": 250,
     "energy": 250,
     "bandwidth": 10,
+    "war_credits": 1500,
     "page_url": "https://www.playbattleaces.com/units/katbus",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/katbus.png"
   },
@@ -912,6 +952,7 @@
     "matter": 50,
     "energy": 50,
     "bandwidth": 2,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/locust",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/locust.png"
   },
@@ -933,6 +974,7 @@
     "matter": 3000,
     "energy": 3000,
     "bandwidth": 80,
+    "war_credits": 1500,
     "page_url": "https://www.playbattleaces.com/units/kraken",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kraken.png"
   },
@@ -954,6 +996,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/valkyrie",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/valkyrie.png"
   },
@@ -975,6 +1018,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
+    "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/artillery",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/artillery.png"
   },
@@ -1001,6 +1045,7 @@
     "matter": 50,
     "energy": 0,
     "bandwidth": 1,
+    "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/advancedbot",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedbot.png"
   }

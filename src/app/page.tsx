@@ -166,7 +166,7 @@ export default function Home() {
         sortable: true,
       },
       {
-        name: "Attacks",
+        name: "Attack Type",
         key: "attack_type",
         classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
         render: (unit: Unit) => renderAttackType(unit.attack_type),
@@ -267,6 +267,7 @@ export default function Home() {
       {
         name: "Matter",
         header: <Matter className="w-5 h-5" />,
+        description: "Matter cost",
         key: "matter",
         render: (unit: Unit) => renderResource(unit.matter),
         // filter: {
@@ -282,6 +283,7 @@ export default function Home() {
       {
         name: "Energy",
         header: <Energy className="w-5 h-5" />,
+        description: "Energy cost",
         key: "energy",
         render: (unit: Unit) => renderResource(unit.energy),
         // filter: {
@@ -297,6 +299,7 @@ export default function Home() {
       {
         name: "Bandwidth",
         header: <Bandwidth className="w-5 h-5" />,
+        description: "Bandwidth cost",
         key: "bandwidth",
         render: (unit: Unit) => renderResource(unit.bandwidth),
         // filter: {
@@ -306,6 +309,19 @@ export default function Home() {
         //   step: 1,
         //   val: (unit: Unit) => unit.bandwidth,
         // },
+        sortable: true,
+        numeric: true,
+      },
+      {
+        name: "War Credits",
+        header: "💵",
+        description: "War Credits required to unlock",
+        key: "war_credits",
+        render: (unit: Unit) => (
+          <div className="w-full text-right">
+            {unit.war_credits === null ? "?" : unit.war_credits}
+          </div>
+        ),
         sortable: true,
         numeric: true,
       },
@@ -416,7 +432,7 @@ export default function Home() {
   );
 
   return (
-    <table className="relative w-full">
+    <table className="relative w-full text-sm">
       <thead className="text-left">
         <tr>
           {columns.map((column) => (
@@ -431,7 +447,7 @@ export default function Home() {
                 {column.sortable ? (
                   <button
                     className={classNames(
-                      "flex items-center",
+                      "flex items-center w-full",
                       column.numeric ? "justify-end" : "justify-start"
                     )}
                     onClick={() =>
@@ -452,9 +468,11 @@ export default function Home() {
                       )
                     }
                   >
-                    <div className="whitespace-nowrap">
-                      {column.header || column.name}
-                    </div>
+                    <Tooltip tooltip={column.description} position="left">
+                      <div className="whitespace-nowrap">
+                        {column.header || column.name}
+                      </div>
+                    </Tooltip>
                     {sort?.key === (column.sort_key || column.key) && (
                       <div className="ml-1">{sort.asc ? "⬆️" : "⬇️"}</div>
                     )}
@@ -484,7 +502,7 @@ export default function Home() {
                 <td
                   key={column.name}
                   className={classNames(
-                    "px-2 py-px md:py-2 whitespace-nowrap",
+                    "px-2 py-px md:py-1 whitespace-nowrap",
                     idx === 0
                       ? "sticky z-20 left-0 bg-slate-200 dark:bg-slate-800 text-center"
                       : ""

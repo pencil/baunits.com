@@ -20,7 +20,7 @@ const Tab = ({
       <Link
         href={href}
         className={classNames(
-          "p-2 rounded-md text-sm text-black dark:text-white hover:bg-slate-100 dark:hover:bg-slate-600",
+          "p-2 rounded-md text-sm text-black dark:text-white hover:bg-slate-100 dark:hover:bg-slate-600 cursor-pointer",
           pathname === href ? "bg-slate-50 dark:bg-slate-700" : ""
         )}
       >

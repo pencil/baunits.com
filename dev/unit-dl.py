@@ -98,6 +98,7 @@ class Unit:
     matter: int
     energy: int
     bandwidth: int
+    war_credits: int | None
     page_url: str
     icon_url: str
 
@@ -127,6 +128,10 @@ class ChangeLog:
     changes: list[UnitChange]
 
 
+with open("src/data/warcredits.json", "r") as jsonfile:
+    unlock_cost_by_unit = json.load(jsonfile)
+
+
 def unit_from_json(unit: dict, index: int = 0) -> Unit:
     unit["unitTag"] = unit["unitTag"].strip()
     return Unit(
@@ -153,6 +158,7 @@ def unit_from_json(unit: dict, index: int = 0) -> Unit:
         range=unit["statRange"],
         matter=unit["costMatter"],
         energy=unit["costEnergy"],
+        war_credits=unlock_cost_by_unit.get(unit["slug"]),
         bandwidth=unit["costBandwidth"],
         page_url=UNIT_PAGE_URL.format(unit["slug"]),
         icon_url=UNIT_ICON_URL.format(unit["slug"]),
