@@ -255,5 +255,102 @@
         }
       }
     ]
+  },
+  {
+    "date": "2024-07-02",
+    "changes": [
+      {
+        "before": {
+          "index": 20,
+          "name": "Heavy Hunter",
+          "slug": "heavyhunter",
+          "tech_tier": "Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Anti-Air",
+          "armor_type": "Normal",
+          "splash": false,
+          "melee": false,
+          "ability": null,
+          "health": 4,
+          "damage": 5,
+          "speed": 3,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/heavyhunter",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png"
+        },
+        "after": {
+          "index": 20,
+          "name": "Heavy Hunter",
+          "slug": "heavyhunter",
+          "tech_tier": "Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Anti-Air",
+          "armor_type": "Normal",
+          "splash": false,
+          "melee": false,
+          "ability": null,
+          "health": 4,
+          "damage": 5,
+          "speed": 2,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/heavyhunter",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png"
+        }
+      },
+      {
+        "before": {
+          "index": 22,
+          "name": "Raider",
+          "slug": "raider",
+          "tech_tier": "Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Anti-Worker",
+          "armor_type": "Normal",
+          "splash": false,
+          "melee": false,
+          "ability": null,
+          "health": 3,
+          "damage": 5,
+          "speed": 5,
+          "range": 2,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 500,
+          "page_url": "https://www.playbattleaces.com/units/raider",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/raider.png"
+        },
+        "after": {
+          "index": 22,
+          "name": "Raider",
+          "slug": "raider",
+          "tech_tier": "Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Anti-Worker",
+          "armor_type": "Normal",
+          "splash": false,
+          "melee": false,
+          "ability": null,
+          "health": 1,
+          "damage": 5,
+          "speed": 3,
+          "range": 2,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 500,
+          "page_url": "https://www.playbattleaces.com/units/raider",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/raider.png"
+        }
+      }
+    ]
   }
 ]
