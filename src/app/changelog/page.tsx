@@ -29,6 +29,16 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
                 if (valueBefore == value) {
                   return null;
                 }
+                if (
+                  (typeof value !== "string" &&
+                    typeof value !== "number" &&
+                    typeof value !== "boolean") ||
+                  (typeof valueBefore !== "string" &&
+                    typeof valueBefore !== "number" &&
+                    typeof valueBefore !== "boolean")
+                ) {
+                  return null;
+                }
 
                 return (
                   <li key={key}>
@@ -85,19 +95,22 @@ export default function ChangelogPage() {
   return (
     <div className="p-4 w-full max-w-screen-md mx-auto gap-y-2 flex flex-col">
       <h1 className="text-2xl font-semibold pb-2">Changelog</h1>
-      {changelog.reverse().map((entry) => (
-        <div
-          key={entry.date}
-          className="border rounded-lg p-4 mb-4 shadow-sm bg-slate-100 dark:bg-slate-950"
-        >
-          <h2 className="text-xl font-semibold pb-2">{entry.date}</h2>
-          <div>
-            {renderNewUnits(entry.changes)}
-            {renderRemovedUnits(entry.changes)}
-            {renderUpdatedUnits(entry.changes)}
+      {changelog
+        .slice()
+        .reverse()
+        .map((entry) => (
+          <div
+            key={entry.date}
+            className="border rounded-lg p-4 mb-4 shadow-sm bg-slate-100 dark:bg-slate-950"
+          >
+            <h2 className="text-xl font-semibold pb-2">{entry.date}</h2>
+            <div>
+              {renderNewUnits(entry.changes)}
+              {renderRemovedUnits(entry.changes)}
+              {renderUpdatedUnits(entry.changes)}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
