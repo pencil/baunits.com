@@ -16,6 +16,7 @@ export default function Tooltip({ children, tooltip, position }: Props) {
       className="group relative inline-block cursor-pointer align-middle"
       aria-label={tooltip}
       aria-haspopup="true"
+      role="button"
     >
       {children}
       {tooltip ? (
@@ -30,6 +31,7 @@ export default function Tooltip({ children, tooltip, position }: Props) {
               ? "top-0 right-full mr-1 -translate-y-1/2"
               : ""
           )}
+          role="tooltip"
         >
           {tooltip}
         </span>

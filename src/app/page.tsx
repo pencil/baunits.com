@@ -14,11 +14,13 @@ import { useCallback, useMemo, useState } from "react";
 type Unit = (typeof units)[0];
 
 const renderBoolean = (value: boolean) => (
-  <div aria-label={value ? "Yes" : "No"}>{value ? "✅" : "❌"}</div>
+  <div aria-label={value ? "Yes" : "No"} role="img">
+    {value ? "✅" : "❌"}
+  </div>
 );
 const renderBars = (value: number, max = 5) => (
   <Tooltip tooltip={`${value}/${max}`} position="bottom">
-    <div className="flex" aria-label={`${value} out of ${max}`}>
+    <div className="flex" aria-label={`${value} out of ${max}`} role="img">
       {[...Array(value)].map((_, i) => (
         <div
           key={i}
