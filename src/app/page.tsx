@@ -74,34 +74,34 @@ const traitsInOrder = ["small", "antibig", "big", "splash"];
 const renderUnitTraits = (traits: Trait[]) => {
   if (!traits) return null;
   return (
-    <Tooltip
-      position="bottom"
-      tooltipNode={generateTraitsTooltip(traits)}
-      tooltip={traits.map((trait) => trait.name).join(", ")}
-    >
-      <div className="flex flex-row gap-1">
-        {traitsInOrder.map((traitSlug) => {
-          const trait = traits.find((t) => t.slug === traitSlug);
-          return trait ? (
-            renderUnitTrait(trait)
-          ) : (
-            <div key={traitSlug} className="w-4 h-4"></div>
-          );
-        })}
-      </div>
-    </Tooltip>
+    <div className="flex flex-row gap-1">
+      {traitsInOrder.map((traitSlug) => {
+        const trait = traits.find((t) => t.slug === traitSlug);
+        return trait ? (
+          renderUnitTrait(trait)
+        ) : (
+          <div key={traitSlug} className="w-4 h-4"></div>
+        );
+      })}
+    </div>
   );
 };
 const renderUnitTrait = (trait: Trait) => {
   return (
     <div key={trait.slug}>
-      <Image
-        unoptimized
-        src={`/icons/traits/${trait.slug}.png`}
-        alt={trait.name}
-        width={16}
-        height={16}
-      />
+      <Tooltip
+        position="bottom"
+        tooltipNode={generateTraitDescription(trait)}
+        tooltip={trait.name}
+      >
+        <Image
+          unoptimized
+          src={`/icons/traits/${trait.slug}.png`}
+          alt={trait.name}
+          width={20}
+          height={20}
+        />
+      </Tooltip>
     </div>
   );
 };
@@ -232,7 +232,7 @@ export default function Home() {
       {
         name: "Name",
         key: "name",
-        classNames: "w-32 min-w-32 max-w-32 md:w-40 md:min-w-40 md:max-w-40",
+        classNames: "w-36 min-w-36 max-w-36 md:w-40 md:min-w-40 md:max-w-40",
         render: (unit: Unit) => (
           <ExternalLink href={unit.page_url}>{unit.name}</ExternalLink>
         ),
@@ -285,10 +285,7 @@ export default function Home() {
         render: (unit: Unit) => renderUnitTraits(unit.traits),
         filter: {
           type: "multi_select",
-          // Extract all name from all traits from all units
-          options: uniqueArray(
-            units.flatMap((unit) => unit.traits.map((t) => t["name"])),
-          ),
+          options: ["Small", "Anti-Big", "Big", "Splash"],
           vals: (unit: Unit) => unit.traits.map((trait) => trait.name),
         },
       },
