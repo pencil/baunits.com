@@ -13,6 +13,16 @@ const renderDescription = (description?: string) => {
   return <p className="mb-4">{description}</p>;
 };
 
+const formatValue = (value: string | number | boolean): string => {
+  if (typeof value === "boolean") {
+    return value ? "✅" : "❌";
+  }
+  if (typeof value === "number") {
+    return value.toString();
+  }
+  return value;
+};
+
 const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
   const updatedUnits = changes.filter(
     (change) => change.before !== null && change.after !== null,
@@ -57,10 +67,14 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
                       return null;
                     }
 
+                    const formattedValue = formatValue(value);
+                    const formattedValueBefore = formatValue(valueBefore);
+
                     return (
                       <li key={key}>
                         {beautifyKey(key)}:{" "}
-                        {valueBefore === null ? "?" : valueBefore} → {value}
+                        {valueBefore === null ? "?" : formattedValueBefore} →{" "}
+                        {formattedValue}
                       </li>
                     );
                   })}
