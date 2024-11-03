@@ -5,6 +5,14 @@ const beautifyKey = (key: string) => {
   return key.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 };
 
+const renderDescription = (description?: string) => {
+  if (!description) {
+    return null;
+  }
+
+  return <p className="mb-4">{description}</p>;
+};
+
 const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
   const updatedUnits = changes.filter(
     (change) => change.before !== null && change.after !== null,
@@ -110,6 +118,7 @@ export default function ChangelogPage() {
           >
             <h2 className="text-xl font-semibold pb-2">{entry.date}</h2>
             <div>
+              {renderDescription(entry.description)}
               {renderNewUnits(entry.changes)}
               {renderRemovedUnits(entry.changes)}
               {renderUpdatedUnits(entry.changes)}
