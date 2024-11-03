@@ -542,6 +542,14 @@ export default function Home() {
           if (sort === null) return fallback;
           const valA = a[sort.key];
           const valB = b[sort.key];
+
+          // Handle null values: place nulls at the end
+          const aIsNull = valA === null || valA === undefined;
+          const bIsNull = valB === null || valB === undefined;
+          if (aIsNull && !bIsNull) return 1;
+          if (bIsNull && !aIsNull) return -1;
+          if (aIsNull && bIsNull) return fallback;
+
           let res = 0;
           if (typeof valA === "string" && typeof valB === "string") {
             res = valA.localeCompare(valB) * (sort.asc ? 1 : -1);
