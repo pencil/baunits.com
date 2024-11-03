@@ -1,4 +1,10 @@
 import changelog from "@/data/changelog.json";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Battle Aces Units Changelog",
+  description: "Changelog for Battle Aces units.",
+};
 
 const beautifyKey = (key: string) => {
   // Turn attack_type into Attack Type
@@ -128,7 +134,10 @@ const renderRemovedUnits = (changes: (typeof changelog)[0]["changes"]) => {
 export default function ChangelogPage() {
   return (
     <div className="p-4 w-full max-w-screen-md mx-auto gap-y-2 flex flex-col">
-      <h1 className="text-2xl font-semibold pb-2">Changelog</h1>
+      <h1 className="text-2xl font-semibold">Battle Aces Units Changelog</h1>
+      This page aims to document changes to Battle Aces units over time. This
+      includes new units, removed units, and changes to existing units. The page
+      is automatically updated when the official Battle Aces website is updated.
       {changelog
         .slice()
         .reverse()
