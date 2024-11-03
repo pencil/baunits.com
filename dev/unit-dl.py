@@ -38,13 +38,13 @@ def get_page_json(url) -> dict:
 
 def extract_attack_type(
     unit: dict[str, Any],
-) -> Literal["Ground", "Air", "Anti-Air", "Versatile", "Anti-Worker"]:
+) -> Literal["Ground", "Air", "Ground + Air", "Workers"]:
     if unit["unitDescription"] == "Can only attack workers":
-        return "Anti-Worker"
+        return "Workers"
     elif unit["targetsAir"] and unit["targetsGround"]:
-        return "Versatile"
+        return "Ground + Air"
     elif unit["targetsAir"]:
-        return "Anti-Air"
+        return "Air"
     return "Ground"
 
 

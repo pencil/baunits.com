@@ -42,16 +42,16 @@ const renderResource = (value: number) => (
 );
 const renderAttackType = (value: string) => {
   switch (value) {
-    case "Anti-Air":
+    case "Air":
       return (
         <TextTooltip tooltip="This unit can only attack air units.">
-          Anti-Air
+          Air
         </TextTooltip>
       );
-    case "Anti-Worker":
+    case "Workers":
       return (
         <TextTooltip tooltip="This unit can only attack worker units.">
-          Anti-Worker
+          Workers
         </TextTooltip>
       );
     case "Ground":
@@ -60,10 +60,10 @@ const renderAttackType = (value: string) => {
           Ground
         </TextTooltip>
       );
-    case "Versatile":
+    case "Ground + Air":
       return (
         <TextTooltip tooltip="This unit can attack air and ground units.">
-          Versatile
+          Ground + Air
         </TextTooltip>
       );
     default:
@@ -268,7 +268,7 @@ export default function Home() {
         sortable: true,
       },
       {
-        name: "Attack Type",
+        name: "Attacks",
         key: "attack_type",
         classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
         render: (unit: Unit) => renderAttackType(unit.attack_type),
