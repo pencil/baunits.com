@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useCallback, useMemo, useState } from "react";
 
 type Unit = (typeof units)[0];
+type Trait = (typeof units)[0]["traits"][0];
 
 const renderBoolean = (value: boolean) => (
   <div aria-label={value ? "Yes" : "No"} role="img">
@@ -43,13 +44,13 @@ const renderAttackType = (value: string) => {
   switch (value) {
     case "Anti-Air":
       return (
-        <TextTooltip tooltip="This unit is most effective against air units.">
+        <TextTooltip tooltip="This unit can only attack air units.">
           Anti-Air
         </TextTooltip>
       );
     case "Anti-Worker":
       return (
-        <TextTooltip tooltip="This unit is can only attack workers.">
+        <TextTooltip tooltip="This unit can only attack worker units.">
           Anti-Worker
         </TextTooltip>
       );
@@ -61,13 +62,37 @@ const renderAttackType = (value: string) => {
       );
     case "Versatile":
       return (
-        <TextTooltip tooltip="This unit is effective against both air and ground units.">
+        <TextTooltip tooltip="This unit can attack air and ground units.">
           Versatile
         </TextTooltip>
       );
     default:
       return value;
   }
+};
+const traits = ["small", "antibig", "big", "splash"];
+const renderUnitTraits = (traits: Trait[]) => {
+  if (!traits) return null;
+  return (
+    <div className="flex flex-row gap-1">
+      {traits.map((trait) => renderUnitTrait(trait))}
+    </div>
+  );
+};
+const renderUnitTrait = (trait: Trait) => {
+  return (
+    <div key={trait.slug}>
+      <Tooltip tooltip={trait.name} position="right">
+        <Image
+          unoptimized
+          src={`/icons/traits/${trait.slug}.png`}
+          alt={trait.name}
+          width={16}
+          height={16}
+        />
+      </Tooltip>
+    </div>
+  );
 };
 
 type FilterString = {
@@ -108,7 +133,7 @@ export default function Home() {
     Record<string, (unit: Unit) => boolean>
   >({});
   const [sort, setSort] = useState<{ key: keyof Unit; asc: boolean } | null>(
-    null
+    null,
   );
   const columns = useMemo(
     () => [
@@ -179,25 +204,18 @@ export default function Home() {
         },
       },
       {
-        name: "Durable?",
-        key: "durable",
-        render: (unit: Unit) => renderBoolean(unit.armor_type === "Durable"),
+        name: "Traits",
+        key: "traits",
+        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
+        render: (unit: Unit) => renderUnitTraits(unit.traits),
         filter: {
-          type: "boolean",
-          val: (unit: Unit) => unit.armor_type === "Durable",
+          type: "select",
+          // Extract all name from all traits from all units
+          options: uniqueArray(
+            units.flatMap((unit) => unit.traits.map((t) => t["name"])),
+          ),
+          val: (unit: Unit) => unit?.traits?.[0]?.name || "",
         },
-      },
-      {
-        name: "Splash?",
-        key: "splash",
-        render: (unit: Unit) => renderBoolean(unit.splash),
-        filter: { type: "boolean", val: (unit: Unit) => unit.splash },
-      },
-      {
-        name: "Melee?",
-        key: "melee",
-        render: (unit: Unit) => renderBoolean(unit.melee),
-        filter: { type: "boolean", val: (unit: Unit) => unit.melee },
       },
       {
         name: "Ability",
@@ -328,7 +346,7 @@ export default function Home() {
         numeric: true,
       },
     ],
-    []
+    [],
   );
 
   const renderFilter = useCallback((name: string, f: Filter) => {
@@ -414,7 +432,7 @@ export default function Home() {
     () =>
       units
         .filter((unit) =>
-          Object.values(filters).every((filter) => filter(unit))
+          Object.values(filters).every((filter) => filter(unit)),
         )
         .sort((a: Unit, b: Unit) => {
           const fallback = a.index - b.index;
@@ -430,7 +448,7 @@ export default function Home() {
           if (res === 0) res = fallback;
           return res;
         }),
-    [filters, sort]
+    [filters, sort],
   );
 
   return (
@@ -442,7 +460,7 @@ export default function Home() {
               key={column.name}
               className={classNames(
                 "sticky top-0 px-2 py-3 bg-slate-200 dark:bg-slate-800 z-40 align-top",
-                column.classNames
+                column.classNames,
               )}
             >
               <div className="flex flex-col font-semibold">
@@ -450,7 +468,7 @@ export default function Home() {
                   <button
                     className={classNames(
                       "flex items-center w-full",
-                      column.numeric ? "justify-end" : "justify-start"
+                      column.numeric ? "justify-end" : "justify-start",
                     )}
                     onClick={() =>
                       setSort((prev) =>
@@ -466,7 +484,7 @@ export default function Home() {
                               key: (column.sort_key ||
                                 column.key) as keyof Unit,
                               asc: true,
-                            }
+                            },
                       )
                     }
                   >
@@ -507,7 +525,7 @@ export default function Home() {
                     "px-2 py-px md:py-1 whitespace-nowrap",
                     idx === 0
                       ? "sticky z-20 left-0 bg-slate-200 dark:bg-slate-800 text-center"
-                      : ""
+                      : "",
                   )}
                 >
                   {column.render(unit)}

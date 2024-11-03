@@ -6,9 +6,6 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": true,
     "ability": null,
     "health": 4,
     "damage": 2,
@@ -19,7 +16,28 @@
     "bandwidth": 2,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/crab",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crab.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crab.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 1,
@@ -27,21 +45,39 @@
     "slug": "hunter",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": null,
     "health": 2,
-    "damage": 1,
+    "damage": 3,
     "speed": 2,
     "range": 2,
-    "matter": 75,
-    "energy": 25,
+    "matter": 50,
+    "energy": 50,
     "bandwidth": 2,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/hunter",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hunter.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hunter.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 2,
@@ -50,9 +86,6 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": {
       "name": "Recall",
       "slug": "recall",
@@ -68,7 +101,28 @@
     "bandwidth": 2,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/recall",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recall.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recall.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 3,
@@ -76,10 +130,7 @@
     "slug": "recallhunter",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": {
       "name": "Recall",
       "slug": "recall",
@@ -87,15 +138,36 @@
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/recall.png"
     },
     "health": 2,
-    "damage": 2,
+    "damage": 3,
     "speed": 1,
     "range": 2,
-    "matter": 75,
-    "energy": 25,
+    "matter": 50,
+    "energy": 50,
     "bandwidth": 2,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/recallhunter",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallhunter.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallhunter.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 4,
@@ -104,9 +176,6 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": true,
     "ability": null,
     "health": 3,
     "damage": 1,
@@ -117,7 +186,28 @@
     "bandwidth": 1,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/scorpion",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/scorpion.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/scorpion.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 5,
@@ -126,20 +216,38 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 2,
-    "damage": 1,
+    "damage": 3,
     "speed": 2,
     "range": 2,
-    "matter": 75,
-    "energy": 25,
+    "matter": 50,
+    "energy": 50,
     "bandwidth": 2,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/beetle",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/beetle.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/beetle.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 6,
@@ -148,9 +256,6 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": {
       "name": "Blink",
       "slug": "blink",
@@ -166,7 +271,28 @@
     "bandwidth": 2,
     "war_credits": 200,
     "page_url": "https://www.playbattleaces.com/units/blink",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blink.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blink.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 7,
@@ -174,10 +300,7 @@
     "slug": "blinkhunter",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": {
       "name": "Blink",
       "slug": "blink",
@@ -185,15 +308,36 @@
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/blink.png"
     },
     "health": 2,
-    "damage": 1,
+    "damage": 3,
     "speed": 2,
     "range": 2,
-    "matter": 75,
-    "energy": 25,
+    "matter": 50,
+    "energy": 50,
     "bandwidth": 2,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/blinkhunter",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blinkhunter.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blinkhunter.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 8,
@@ -202,9 +346,6 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": {
       "name": "Overclock",
       "slug": "overclock",
@@ -220,18 +361,36 @@
     "bandwidth": 1,
     "war_credits": 300,
     "page_url": "https://www.playbattleaces.com/units/gunbot",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/gunbot.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/gunbot.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 9,
-    "name": "MissileBot",
+    "name": "Missilebot",
     "slug": "missilebot",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": {
       "name": "Overclock",
       "slug": "overclock",
@@ -239,15 +398,36 @@
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
     },
     "health": 2,
-    "damage": 1,
+    "damage": 3,
     "speed": 2,
     "range": 2,
-    "matter": 75,
-    "energy": 25,
+    "matter": 50,
+    "energy": 50,
     "bandwidth": 2,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/missilebot",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/missilebot.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/missilebot.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 10,
@@ -256,9 +436,6 @@
     "tech_tier": "Core",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": true,
     "ability": null,
     "health": 1,
     "damage": 1,
@@ -269,7 +446,28 @@
     "bandwidth": 1,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/wasp",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/wasp.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/wasp.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 11,
@@ -277,32 +475,127 @@
     "slug": "hornet",
     "tech_tier": "Core",
     "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": null,
     "health": 1,
-    "damage": 2,
+    "damage": 4,
     "speed": 5,
     "range": 2,
-    "matter": 75,
-    "energy": 25,
+    "matter": 50,
+    "energy": 50,
     "bandwidth": 2,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/hornet",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hornet.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/hornet.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
     "index": 12,
+    "name": "Knight",
+    "slug": "knight",
+    "tech_tier": "Core",
+    "air_ground": "Ground",
+    "attack_type": "Ground",
+    "ability": null,
+    "health": 4,
+    "damage": 4,
+    "speed": 3,
+    "range": 2,
+    "matter": 200,
+    "energy": 0,
+    "bandwidth": 4,
+    "war_credits": null,
+    "page_url": "https://www.playbattleaces.com/units/knight",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/knight.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ]
+  },
+  {
+    "index": 13,
+    "name": "Crossbow",
+    "slug": "crossbow",
+    "tech_tier": "Core",
+    "air_ground": "Ground",
+    "attack_type": "Versatile",
+    "ability": null,
+    "health": 4,
+    "damage": 4,
+    "speed": 2,
+    "range": 2,
+    "matter": 100,
+    "energy": 100,
+    "bandwidth": 4,
+    "war_credits": null,
+    "page_url": "https://www.playbattleaces.com/units/crossbow",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crossbow.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ]
+  },
+  {
+    "index": 14,
     "name": "Ballista",
     "slug": "ballista",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": null,
     "health": 2,
     "damage": 5,
@@ -313,18 +606,36 @@
     "bandwidth": 5,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/ballista",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/ballista.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/ballista.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 13,
+    "index": 15,
     "name": "King Crab",
     "slug": "kingcrab",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Durable",
-    "splash": true,
-    "melee": true,
     "ability": null,
     "health": 4,
     "damage": 5,
@@ -335,18 +646,51 @@
     "bandwidth": 5,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/kingcrab",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kingcrab.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kingcrab.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 14,
+    "index": 16,
     "name": "Crusader",
     "slug": "crusader",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Durable",
-    "splash": false,
-    "melee": true,
     "ability": null,
     "health": 5,
     "damage": 4,
@@ -357,20 +701,38 @@
     "bandwidth": 5,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/crusader",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crusader.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crusader.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ]
   },
   {
-    "index": 15,
+    "index": 17,
     "name": "Bomber",
     "slug": "bomber",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": null,
-    "health": 1,
+    "health": 2,
     "damage": 5,
     "speed": 5,
     "range": 1,
@@ -379,18 +741,51 @@
     "bandwidth": 2,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/bomber",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bomber.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bomber.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      },
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 16,
+    "index": 18,
     "name": "Shocker",
     "slug": "shocker",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": null,
     "health": 3,
     "damage": 5,
@@ -401,45 +796,81 @@
     "bandwidth": 5,
     "war_credits": 300,
     "page_url": "https://www.playbattleaces.com/units/shocker",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/shocker.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/shocker.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 17,
+    "index": 19,
     "name": "Recall Shocker",
     "slug": "recallshocker",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": {
       "name": "Recall",
       "slug": "recall",
       "description": "Teleport to your nearest specified base.",
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/recall.png"
     },
-    "health": 4,
+    "health": 3,
     "damage": 5,
     "speed": 1,
-    "range": 2,
+    "range": 4,
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/recallshocker",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallshocker.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recallshocker.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 18,
+    "index": 20,
     "name": "Mortar",
     "slug": "mortar",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": {
       "name": "Setup",
       "slug": "setup",
@@ -455,20 +886,38 @@
     "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/mortar",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mortar.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mortar.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 19,
+    "index": 21,
     "name": "Swift Shocker",
     "slug": "swiftshocker",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": null,
-    "health": 2,
+    "health": 3,
     "damage": 5,
     "speed": 4,
     "range": 2,
@@ -477,21 +926,39 @@
     "bandwidth": 5,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/swiftshocker",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/swiftshocker.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/swiftshocker.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 20,
+    "index": 22,
     "name": "Heavy Hunter",
     "slug": "heavyhunter",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": null,
     "health": 4,
-    "damage": 5,
+    "damage": 4,
     "speed": 3,
     "range": 4,
     "matter": 125,
@@ -499,18 +966,18 @@
     "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/heavyhunter",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png",
+    "traits": [],
+    "counters": [],
+    "countered_by": []
   },
   {
-    "index": 21,
+    "index": 23,
     "name": "Destroyer",
     "slug": "destroyer",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 3,
     "damage": 5,
@@ -521,20 +988,38 @@
     "bandwidth": 5,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/destroyer",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/destroyer.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/destroyer.png",
+    "traits": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ]
   },
   {
-    "index": 22,
+    "index": 24,
     "name": "Raider",
     "slug": "raider",
     "tech_tier": "Foundry",
     "air_ground": "Ground",
     "attack_type": "Anti-Worker",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
-    "health": 1,
+    "health": 3,
     "damage": 5,
     "speed": 3,
     "range": 2,
@@ -543,40 +1028,63 @@
     "bandwidth": 5,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/raider",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/raider.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/raider.png",
+    "traits": [],
+    "counters": [],
+    "countered_by": []
   },
   {
-    "index": 23,
+    "index": 25,
     "name": "Turret",
     "slug": "turret",
     "tech_tier": "Foundry",
     "air_ground": "Static",
-    "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
-    "ability": null,
+    "attack_type": "Ground",
+    "ability": {
+      "name": "Destruct",
+      "slug": "destruct",
+      "description": "Destroy the unit to free up bandwidth.",
+      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/destruct.png"
+    },
     "health": 4,
     "damage": 5,
     "speed": 0,
     "range": 4,
-    "matter": 100,
-    "energy": 50,
-    "bandwidth": 0,
+    "matter": 125,
+    "energy": 125,
+    "bandwidth": 5,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/turret",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/turret.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/turret.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 24,
+    "index": 26,
     "name": "Butterfly",
     "slug": "butterfly",
     "tech_tier": "Starforge",
     "air_ground": "Air",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 2,
     "damage": 5,
@@ -587,18 +1095,56 @@
     "bandwidth": 5,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/butterfly",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/butterfly.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/butterfly.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      },
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 25,
+    "index": 27,
     "name": "Dragonfly",
     "slug": "dragonfly",
     "tech_tier": "Starforge",
     "air_ground": "Air",
     "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 4,
     "damage": 3,
@@ -609,18 +1155,41 @@
     "bandwidth": 5,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/dragonfly",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/dragonfly.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/dragonfly.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 26,
+    "index": 28,
     "name": "Falcon",
     "slug": "falcon",
     "tech_tier": "Starforge",
     "air_ground": "Air",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 4,
     "damage": 4,
@@ -631,20 +1200,43 @@
     "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/falcon",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/falcon.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/falcon.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 27,
+    "index": 29,
     "name": "Airship",
     "slug": "airship",
     "tech_tier": "Starforge",
     "air_ground": "Air",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": null,
-    "health": 4,
+    "health": 3,
     "damage": 4,
     "speed": 3,
     "range": 2,
@@ -653,18 +1245,41 @@
     "bandwidth": 5,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/airship",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/airship.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/airship.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 28,
+    "index": 30,
     "name": "Advanced Recall",
     "slug": "advancedrecall",
     "tech_tier": "Starforge",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": {
       "name": "Recall",
       "slug": "recall",
@@ -672,7 +1287,7 @@
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/recall.png"
     },
     "health": 1,
-    "damage": 4,
+    "damage": 3,
     "speed": 2,
     "range": 2,
     "matter": 50,
@@ -680,18 +1295,36 @@
     "bandwidth": 2,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/advancedrecall",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedrecall.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedrecall.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
-    "index": 29,
+    "index": 31,
     "name": "Mammoth",
     "slug": "mammoth",
     "tech_tier": "Starforge",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Durable",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 5,
     "damage": 3,
@@ -702,18 +1335,36 @@
     "bandwidth": 5,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/mammoth",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mammoth.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/mammoth.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ]
   },
   {
-    "index": 30,
+    "index": 32,
     "name": "Stinger",
     "slug": "stinger",
     "tech_tier": "Starforge",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 3,
     "damage": 5,
@@ -724,40 +1375,63 @@
     "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/stinger",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/stinger.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/stinger.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
   },
   {
-    "index": 31,
-    "name": "Heavy Turret",
-    "slug": "heavyturret",
+    "index": 33,
+    "name": "Flak Turret",
+    "slug": "flakturret",
     "tech_tier": "Starforge",
     "air_ground": "Static",
-    "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
-    "ability": null,
-    "health": 5,
+    "attack_type": "Anti-Air",
+    "ability": {
+      "name": "Destruct",
+      "slug": "destruct",
+      "description": "Destroy the unit to free up bandwidth.",
+      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/destruct.png"
+    },
+    "health": 4,
     "damage": 5,
     "speed": 0,
     "range": 4,
-    "matter": 200,
-    "energy": 100,
-    "bandwidth": 0,
-    "war_credits": 300,
-    "page_url": "https://www.playbattleaces.com/units/heavyturret",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyturret.png"
+    "matter": 125,
+    "energy": 125,
+    "bandwidth": 5,
+    "war_credits": null,
+    "page_url": "https://www.playbattleaces.com/units/flakturret",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/flakturret.png",
+    "traits": [],
+    "counters": [],
+    "countered_by": []
   },
   {
-    "index": 32,
+    "index": 34,
     "name": "Heavy Ballista",
     "slug": "heavyballista",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": null,
     "health": 4,
     "damage": 5,
@@ -768,43 +1442,54 @@
     "bandwidth": 10,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/heavyballista",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyballista.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyballista.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 33,
-    "name": "Predator",
-    "slug": "predator",
-    "tech_tier": "Advanced Foundry",
-    "air_ground": "Ground",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
-    "ability": null,
-    "health": 2,
-    "damage": 5,
-    "speed": 2,
-    "range": 5,
-    "matter": 125,
-    "energy": 125,
-    "bandwidth": 5,
-    "war_credits": 700,
-    "page_url": "https://www.playbattleaces.com/units/predator",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/predator.png"
-  },
-  {
-    "index": 34,
+    "index": 35,
     "name": "Sniper",
     "slug": "sniper",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 2,
-    "damage": 4,
+    "damage": 5,
     "speed": 1,
     "range": 5,
     "matter": 125,
@@ -812,45 +1497,96 @@
     "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/sniper",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/sniper.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/sniper.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   },
   {
-    "index": 35,
+    "index": 36,
     "name": "Advanced Blink",
     "slug": "advancedblink",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
     "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": {
       "name": "Blink",
       "slug": "blink",
       "description": "Teleports a short distance towards a target location.",
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/blink.png"
     },
-    "health": 4,
-    "damage": 2,
+    "health": 5,
+    "damage": 5,
     "speed": 3,
     "range": 2,
-    "matter": 50,
-    "energy": 50,
-    "bandwidth": 2,
+    "matter": 125,
+    "energy": 125,
+    "bandwidth": 5,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/advancedblink",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedblink.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedblink.png",
+    "traits": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      },
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ]
   },
   {
-    "index": 36,
+    "index": 37,
     "name": "Assaultbot",
     "slug": "assaultbot",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": {
       "name": "Overclock",
       "slug": "overclock",
@@ -858,7 +1594,7 @@
       "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
     },
     "health": 1,
-    "damage": 2,
+    "damage": 3,
     "speed": 2,
     "range": 2,
     "matter": 50,
@@ -866,18 +1602,96 @@
     "bandwidth": 1,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/assaultbot",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      },
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ]
   },
   {
-    "index": 37,
+    "index": 38,
+    "name": "Advancedbot",
+    "slug": "advancedbot",
+    "tech_tier": "Advanced Foundry",
+    "air_ground": "Ground",
+    "attack_type": "Versatile",
+    "ability": {
+      "name": "Overclock",
+      "slug": "overclock",
+      "description": "Temporarily increases movement and attack speed.",
+      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+    },
+    "health": 1,
+    "damage": 4,
+    "speed": 2,
+    "range": 2,
+    "matter": 25,
+    "energy": 25,
+    "bandwidth": 1,
+    "war_credits": 700,
+    "page_url": "https://www.playbattleaces.com/units/advancedbot",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedbot.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ]
+  },
+  {
+    "index": 39,
     "name": "Behemoth",
     "slug": "behemoth",
     "tech_tier": "Advanced Foundry",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Durable",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 5,
     "damage": 4,
@@ -888,18 +1702,36 @@
     "bandwidth": 5,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/behemoth",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/behemoth.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/behemoth.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ]
   },
   {
-    "index": 38,
+    "index": 40,
     "name": "Bulwark",
     "slug": "bulwark",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
     "attack_type": "Versatile",
-    "armor_type": "Durable",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 5,
     "damage": 5,
@@ -910,18 +1742,41 @@
     "bandwidth": 10,
     "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/bulwark",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bulwark.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/bulwark.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 39,
+    "index": 41,
     "name": "Katbus",
     "slug": "katbus",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
     "attack_type": "Ground",
-    "armor_type": "Durable",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 5,
     "damage": 5,
@@ -932,18 +1787,41 @@
     "bandwidth": 10,
     "war_credits": 1500,
     "page_url": "https://www.playbattleaces.com/units/katbus",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/katbus.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/katbus.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 40,
+    "index": 42,
     "name": "Locust",
     "slug": "locust",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
     "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 1,
     "damage": 2,
@@ -954,18 +1832,41 @@
     "bandwidth": 2,
     "war_credits": 700,
     "page_url": "https://www.playbattleaces.com/units/locust",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/locust.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/locust.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 41,
+    "index": 43,
     "name": "Kraken",
     "slug": "kraken",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
     "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
     "ability": null,
     "health": 5,
     "damage": 5,
@@ -976,18 +1877,81 @@
     "bandwidth": 80,
     "war_credits": 1500,
     "page_url": "https://www.playbattleaces.com/units/kraken",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kraken.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/kraken.png",
+    "traits": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 42,
+    "index": 44,
+    "name": "Predator",
+    "slug": "predator",
+    "tech_tier": "Advanced Starforge",
+    "air_ground": "Ground",
+    "attack_type": "Versatile",
+    "ability": null,
+    "health": 2,
+    "damage": 5,
+    "speed": 2,
+    "range": 5,
+    "matter": 125,
+    "energy": 125,
+    "bandwidth": 5,
+    "war_credits": 700,
+    "page_url": "https://www.playbattleaces.com/units/predator",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/predator.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
+  },
+  {
+    "index": 45,
     "name": "Valkyrie",
     "slug": "valkyrie",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Air",
-    "attack_type": "Anti-Air",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
+    "attack_type": "Versatile",
     "ability": null,
     "health": 4,
     "damage": 5,
@@ -998,55 +1962,112 @@
     "bandwidth": 5,
     "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/valkyrie",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/valkyrie.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/valkyrie.png",
+    "traits": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      },
+      {
+        "name": "Anti-Air",
+        "slug": "antiair",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+      }
+    ]
   },
   {
-    "index": 43,
+    "index": 46,
+    "name": "Advanced Destroyer",
+    "slug": "advanceddestroyer",
+    "tech_tier": "Advanced Starforge",
+    "air_ground": "Ground",
+    "attack_type": "Ground",
+    "ability": null,
+    "health": 2,
+    "damage": 5,
+    "speed": 1,
+    "range": 5,
+    "matter": 125,
+    "energy": 125,
+    "bandwidth": 5,
+    "war_credits": null,
+    "page_url": "https://www.playbattleaces.com/units/advanceddestroyer",
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advanceddestroyer.png",
+    "traits": [
+      {
+        "name": "Anti-Big",
+        "slug": "antibig",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ]
+  },
+  {
+    "index": 47,
     "name": "Artillery",
     "slug": "artillery",
     "tech_tier": "Advanced Starforge",
     "air_ground": "Ground",
     "attack_type": "Ground",
-    "armor_type": "Normal",
-    "splash": true,
-    "melee": false,
     "ability": null,
     "health": 3,
     "damage": 5,
-    "speed": 1,
+    "speed": 2,
     "range": 4,
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
     "war_credits": 400,
     "page_url": "https://www.playbattleaces.com/units/artillery",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/artillery.png"
-  },
-  {
-    "index": 44,
-    "name": "Advancedbot",
-    "slug": "advancedbot",
-    "tech_tier": "Advanced Starforge",
-    "air_ground": "Ground",
-    "attack_type": "Versatile",
-    "armor_type": "Normal",
-    "splash": false,
-    "melee": false,
-    "ability": {
-      "name": "Overclock",
-      "slug": "overclock",
-      "description": "Temporarily increases movement and attack speed.",
-      "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
-    },
-    "health": 1,
-    "damage": 2,
-    "speed": 2,
-    "range": 2,
-    "matter": 50,
-    "energy": 0,
-    "bandwidth": 1,
-    "war_credits": 700,
-    "page_url": "https://www.playbattleaces.com/units/advancedbot",
-    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedbot.png"
+    "icon_url": "https://cdn.playbattleaces.com/images/icons/units/artillery.png",
+    "traits": [
+      {
+        "name": "Splash",
+        "slug": "splash",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+      }
+    ],
+    "counters": [
+      {
+        "name": "Small",
+        "slug": "small",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+      }
+    ],
+    "countered_by": [
+      {
+        "name": "Big",
+        "slug": "big",
+        "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+      }
+    ]
   }
 ]

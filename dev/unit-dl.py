@@ -1,7 +1,7 @@
 import os
 import json
 import dataclasses
-from typing import Literal
+from typing import Literal, Any
 import urllib.request
 import datetime
 
@@ -9,6 +9,7 @@ import datetime
 UNIT_PAGE_URL = "https://www.playbattleaces.com/units/{0}"
 FIRST_UNIT_URL = UNIT_PAGE_URL.format("crab")
 UNIT_ICON_URL = "https://cdn.playbattleaces.com/images/icons/units/{0}.png"
+TRAIT_ICON_URL = "https://cdn.playbattleaces.com/images/icons/traits/{0}.png"
 ABILITY_ICON_URL = "https://cdn.playbattleaces.com/images/icons/abilities/{0}.png"
 
 CSV = False
@@ -36,39 +37,36 @@ def get_page_json(url) -> dict:
 
 
 def extract_attack_type(
-    tag: str,
+    unit: dict[str, Any],
 ) -> Literal["Ground", "Air", "Anti-Air", "Versatile", "Anti-Worker"]:
-    if tag.startswith("Anti-Air"):
-        return "Anti-Air"
-    elif tag.startswith("Versatile"):
-        return "Versatile"
-    elif tag.startswith("Anti-Worker"):
+    if unit["unitDescription"] == "Can only attack workers":
         return "Anti-Worker"
+    elif unit["targetsAir"] and unit["targetsGround"]:
+        return "Versatile"
+    elif unit["targetsAir"]:
+        return "Anti-Air"
     return "Ground"
 
 
-def extract_armor_type(tag: str) -> Literal["Normal", "Durable"]:
-    if " Durable " in tag:
-        return "Durable"
-    return "Normal"
-
-
-def extract_air_ground(tag: str) -> Literal["Air", "Ground", "Static", "?"]:
-    if tag.endswith("Air Unit"):
-        return "Air"
-    elif tag.endswith("Ground Unit"):
-        return "Ground"
-    elif tag.endswith("Base Defense"):
+def extract_air_ground(
+    unit: dict[str, Any],
+) -> Literal["Air", "Ground", "Static", "?"]:
+    if unit["statSpeed"] == 0:
         return "Static"
+    domain = unit["unitDomain"]
+    if domain["slug"] == "air":
+        return "Air"
+    elif domain["slug"] == "ground":
+        return "Ground"
     return "?"
 
 
-def extract_has_splash(tag: str) -> bool:
-    return "Splash" in tag
+def check_unit_traits(traits: list[dict[str, str]], trait: str) -> bool:
+    return any(t["slug"] == trait for t in traits)
 
 
-def extract_is_melee(tag: str) -> bool:
-    return "Melee" in tag
+def extract_is_melee(unit: dict[str, Any]) -> bool:
+    return unit["statRange"] == 1
 
 
 @dataclasses.dataclass
@@ -76,6 +74,13 @@ class Ability:
     name: str
     slug: str
     description: str
+    icon_url: str
+
+
+@dataclasses.dataclass
+class Trait:
+    name: str
+    slug: str
     icon_url: str
 
 
@@ -87,9 +92,6 @@ class Unit:
     tech_tier: str
     air_ground: str
     attack_type: str
-    armor_type: str
-    splash: bool
-    melee: bool
     ability: Ability | None
     health: int
     damage: int
@@ -102,7 +104,13 @@ class Unit:
     page_url: str
     icon_url: str
 
-    def __eq__(self, other: "Unit") -> bool:
+    traits: list[Trait] = dataclasses.field(default_factory=list)
+    counters: list[Trait] = dataclasses.field(default_factory=list)
+    countered_by: list[Trait] = dataclasses.field(default_factory=list)
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Unit):
+            return NotImplemented
         # Compare all fields except index
         return all(
             getattr(self, field.name) == getattr(other, field.name)
@@ -112,6 +120,15 @@ class Unit:
     @classmethod
     def from_dict(cls, data: dict) -> "Unit":
         data["ability"] = Ability(**data["ability"]) if data["ability"] else None
+        data["traits"] = [Trait(**t) for t in data["traits"]] if data["traits"] else []
+        data["counters"] = (
+            [Trait(**t) for t in data["counters"]] if data["counters"] else []
+        )
+        data["countered_by"] = (
+            [Trait(**t) for t in data["countered_by"]] if data["countered_by"] else []
+        )
+        if "armor_type" in data:
+            del data["armor_type"]
         return cls(**data)
 
 
@@ -132,18 +149,25 @@ with open("src/data/warcredits.json", "r") as jsonfile:
     unlock_cost_by_unit = json.load(jsonfile)
 
 
+def extract_traits(traits: list[dict[str, str]]) -> list[Trait]:
+    return [
+        Trait(name=t["name"], slug=t["slug"], icon_url=TRAIT_ICON_URL.format(t["slug"]))
+        for t in traits
+    ]
+
+
 def unit_from_json(unit: dict, index: int = 0) -> Unit:
-    unit["unitTag"] = unit["unitTag"].strip()
+    print(unit)
     return Unit(
         index=index,
         name=unit["name"],
         slug=unit["slug"],
         tech_tier=unit["techTier"]["name"],
-        air_ground=extract_air_ground(unit["unitTag"]),
-        attack_type=extract_attack_type(unit["unitTag"]),
-        armor_type=extract_armor_type(unit["unitTag"]),
-        splash=extract_has_splash(unit["unitTag"]),
-        melee=extract_is_melee(unit["unitTag"]),
+        traits=extract_traits(unit["unitTraits"]),
+        counters=extract_traits(unit["unitCounters"]),
+        countered_by=extract_traits(unit["unitCounteredby"]),
+        air_ground=extract_air_ground(unit),
+        attack_type=extract_attack_type(unit),
         ability=Ability(
             name=unit["unitAbility"]["name"],
             slug=unit["unitAbility"]["slug"],
@@ -171,85 +195,6 @@ units = [
     unit_from_json(unit, idx)
     for idx, unit in enumerate(data["props"]["pageProps"]["units"])
 ]
-if CSV:
-    import csv
-
-    print("Writing units to build/units.csv")
-    with open("build/units.csv", "w+", newline="") as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(
-            [
-                "Name",
-                "Tech Tier",
-                "Air/Ground",
-                "Anti-Air?",
-                "Splash?",
-                "Melee?",
-                "Ability",
-                "Health",
-                "Damage",
-                "Speed",
-                "Range",
-                "Matter",
-                "Energy",
-                "Bandwidth",
-                "URL",
-            ]
-        )
-
-        for unit in units:
-            csvwriter.writerow(
-                [
-                    unit.name,
-                    unit.tech_tier,
-                    unit.air_ground,
-                    unit.attack_type,
-                    unit.splash,
-                    unit.melee,
-                    unit.ability.name if unit.ability else "",
-                    unit.health,
-                    unit.damage,
-                    unit.speed,
-                    unit.range,
-                    unit.matter,
-                    unit.energy,
-                    unit.bandwidth,
-                    unit.page_url,
-                ]
-            )
-
-
-if MD:
-    print("Writing units to build/units.md")
-    with open("build/units.md", "w+") as mdfile:
-        mdfile.write("# Units\n\n")
-        mdfile.write(
-            "| Icon | Name | Tech Tier | Air/Ground | Anti-Air? | Splash? | Melee? | Ability | Health | Damage | Speed | Range | Matter | Energy | Bandwidth |\n"
-        )
-        mdfile.write(
-            "|------|------|-----------|------------|----------|---------|--------|---------|--------|--------|-------|-------|--------|--------|-----------|\n"
-        )
-
-        for unit in units:
-            mdfile.write(
-                f"| <div style='background: linear-gradient(180deg,rgba(12,47,100,.5),rgba(12,47,100,0)) #00000066; width: 34px; height: 34px; padding: 1px; display: flex; justify-content: center; align-items: center;'><img src='{unit.icon_url}' style='max-width: 100%; max-height: 100%;'></div> "
-                f"| [{unit.name}]({unit.page_url}) "
-                f"| {unit.tech_tier} "
-                f"| {unit.air_ground} "
-                f"| {unit.attack_type} "
-                f"| {unit.splash} "
-                f"| {unit.melee} "
-                f"| {unit.ability.name if unit.ability else ''} "
-                f"| <div style='white-space: nowrap;'>{unit.health * '❤️'}</div> "
-                f"| <div style='white-space: nowrap;'>{unit.damage * '⚔️'}</div> "
-                f"| <div style='white-space: nowrap;'>{unit.speed * '🏃'}</div> "
-                f"| <div style='white-space: nowrap;'>{unit.range * '🎯'}</div> "
-                f"| <div style='white-space: nowrap;'>{int(unit.matter / 25) * '🔧'}</div> "
-                f"| <div style='white-space: nowrap;'>{int(unit.energy / 25) * '⚡' if unit.energy > 0 else '-'}</div> "
-                f"| <div style='white-space: nowrap;'>{unit.bandwidth * '📶' if unit.bandwidth > 0 else '-'}</div>\n"
-            )
-
-
 existing_units: list[Unit] = []
 if CHANGELOG and os.path.exists("src/data/units.json"):
     with open("src/data/units.json", "r") as jsonfile:
@@ -301,3 +246,15 @@ for unit in units:
     with open(path, "wb") as iconfile:
         iconfile.write(icon)
         print("downloaded")
+
+# Download all trait icons to build/icons/traits/
+os.makedirs("public/icons/traits", exist_ok=True)
+for unit in units:
+    for trait in unit.traits:
+        path = f"public/icons/traits/{trait.slug}.png"
+        # Skip if the icon is already downloaded
+        if os.path.exists(path):
+            continue
+        icon = get_page_bytes(trait.icon_url)
+        with open(path, "wb") as iconfile:
+            iconfile.write(icon)

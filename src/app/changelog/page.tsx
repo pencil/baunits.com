@@ -7,7 +7,7 @@ const beautifyKey = (key: string) => {
 
 const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
   const updatedUnits = changes.filter(
-    (change) => change.before !== null && change.after !== null
+    (change) => change.before !== null && change.after !== null,
   );
   if (updatedUnits.length === 0) {
     return null;
@@ -22,7 +22,12 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
             <span className="font-semibold">{unit.after.name}</span>
             <ul className="list-disc list-inside ml-4">
               {Object.entries(unit.after).map(([key, value]) => {
-                if (key === "slug" || key === "name" || key === "ability") {
+                if (
+                  key === "slug" ||
+                  key === "name" ||
+                  key === "ability" ||
+                  key === "index"
+                ) {
                   return null;
                 }
                 const valueBefore = unit.before[key as keyof typeof unit.after];
