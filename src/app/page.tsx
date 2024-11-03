@@ -160,7 +160,8 @@ const generateTraitsTooltip = (traits: Trait[]) => {
   );
 };
 const generateTraitDescription = (trait: Trait) => {
-  const counter = traitCounters[trait.slug];
+  if (!(trait.slug in traitCounters)) return null;
+  const counter = traitCounters[trait.slug as keyof typeof traitCounters];
   return (
     <>
       <span className="font-semibold">{trait.name}</span> counters{" "}
@@ -190,7 +191,17 @@ type FilterSelect = {
   options: string[];
   val: (unit: Unit) => string;
 };
-type Filter = FilterString | FilterRange | FilterBoolean | FilterSelect;
+type FilterMultiSelect = {
+  type: "multi_select";
+  options: string[];
+  vals: (unit: Unit) => string[];
+};
+type Filter =
+  | FilterString
+  | FilterRange
+  | FilterBoolean
+  | FilterSelect
+  | FilterMultiSelect;
 
 const uniqueArray = <T extends string | number>(arr: T[]) => {
   // Return only unique values but preserve order
