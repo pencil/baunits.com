@@ -70,28 +70,98 @@ const renderAttackType = (value: string) => {
       return value;
   }
 };
-const traits = ["small", "antibig", "big", "splash"];
+const traitsInOrder = ["small", "antibig", "big", "splash"];
 const renderUnitTraits = (traits: Trait[]) => {
   if (!traits) return null;
   return (
-    <div className="flex flex-row gap-1">
-      {traits.map((trait) => renderUnitTrait(trait))}
-    </div>
+    <Tooltip position="bottom" tooltip={generateUnitTooltip(traits)}>
+      <div className="flex flex-row gap-1">
+        {traitsInOrder.map((traitSlug) => {
+          const trait = traits.find((t) => t.slug === traitSlug);
+          return trait ? (
+            renderUnitTrait(trait)
+          ) : (
+            <div key={traitSlug} className="w-4 h-4"></div>
+          );
+        })}
+      </div>
+    </Tooltip>
   );
 };
 const renderUnitTrait = (trait: Trait) => {
   return (
     <div key={trait.slug}>
-      <Tooltip tooltip={trait.name} position="right">
-        <Image
-          unoptimized
-          src={`/icons/traits/${trait.slug}.png`}
-          alt={trait.name}
-          width={16}
-          height={16}
-        />
-      </Tooltip>
+      <Image
+        unoptimized
+        src={`/icons/traits/${trait.slug}.png`}
+        alt={trait.name}
+        width={16}
+        height={16}
+      />
     </div>
+  );
+};
+const traitCounters = {
+  small: {
+    counters: {
+      slug: "antibig",
+      name: "Anti-Big",
+    },
+    counteredBy: {
+      slug: "splash",
+      name: "Splash",
+    },
+  },
+  antibig: {
+    counters: {
+      slug: "big",
+      name: "Big",
+    },
+    counteredBy: {
+      slug: "small",
+      name: "Small",
+    },
+  },
+  big: {
+    counters: {
+      slug: "splash",
+      name: "Splash",
+    },
+    counteredBy: {
+      slug: "antibig",
+      name: "Anti-Big",
+    },
+  },
+  splash: {
+    counters: {
+      slug: "small",
+      name: "Small",
+    },
+    counteredBy: {
+      slug: "big",
+      name: "Big",
+    },
+  },
+};
+const generateUnitTooltip = (traits: Trait[]) => {
+  const sortedTraits = traits.sort(
+    (a, b) => traitsInOrder.indexOf(a.slug) - traitsInOrder.indexOf(b.slug),
+  );
+  return (
+    <ul>
+      {traits.map((trait) => (
+        <li key={trait.slug}>{generateTraitDescription(trait)}</li>
+      ))}
+    </ul>
+  );
+};
+const generateTraitDescription = (trait: Trait) => {
+  const counter = traitCounters[trait.slug];
+  return (
+    <>
+      <span className="font-semibold">{trait.name}</span> counters{" "}
+      {counter.counters.name}, countered by {counter.counteredBy.name}
+    </>
   );
 };
 

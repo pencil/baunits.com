@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  tooltip?: string;
+  tooltip?: ReactNode;
   position: "bottom" | "right" | "left";
 };
 export default function Tooltip({ children, tooltip, position }: Props) {
@@ -26,10 +26,10 @@ export default function Tooltip({ children, tooltip, position }: Props) {
             position == "bottom"
               ? "top-full -translate-x-1/2 left-1/2"
               : position == "right"
-              ? "top-0 left-full ml-1"
-              : position == "left"
-              ? "top-0 right-full mr-1 -translate-y-1/2"
-              : ""
+                ? "top-0 left-full ml-1"
+                : position == "left"
+                  ? "top-0 right-full mr-1 -translate-y-1/2"
+                  : "",
           )}
           role="tooltip"
         >
