@@ -666,7 +666,7 @@
   },
   {
     "date": "2024-11-03",
-    "description": "This update includes all changes for the upcoming closed beta test and with it the new traits and counter system.",
+    "description": "BAUnits now shows the traits for each unit as they will be included in the upcoming Battle Aces Beta. Additionally, the attack type has been adjusted to mirror the official website. Notably the attack type \"Versatile\", which previously indicated that a unit was effective against Ground as well as Air, no longer exists. Also included are all the stats and other unit changes as reflected below:",
     "changes": [
       {
         "before": {
@@ -1716,3 +1716,4 @@
     ]
   }
 ]
+
