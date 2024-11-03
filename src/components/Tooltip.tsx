@@ -3,10 +3,16 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  tooltip?: ReactNode;
+  tooltip?: string;
+  tooltipNode?: ReactNode;
   position: "bottom" | "right" | "left";
 };
-export default function Tooltip({ children, tooltip, position }: Props) {
+export default function Tooltip({
+  children,
+  tooltip,
+  tooltipNode,
+  position,
+}: Props) {
   if (!tooltip) {
     return <>{children}</>;
   }
@@ -33,7 +39,7 @@ export default function Tooltip({ children, tooltip, position }: Props) {
           )}
           role="tooltip"
         >
-          {tooltip}
+          {tooltipNode || tooltip}
         </span>
       ) : null}
     </div>

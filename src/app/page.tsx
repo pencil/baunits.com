@@ -74,7 +74,11 @@ const traitsInOrder = ["small", "antibig", "big", "splash"];
 const renderUnitTraits = (traits: Trait[]) => {
   if (!traits) return null;
   return (
-    <Tooltip position="bottom" tooltip={generateUnitTooltip(traits)}>
+    <Tooltip
+      position="bottom"
+      tooltipNode={generateTraitsTooltip(traits)}
+      tooltip={traits.map((trait) => trait.name).join(", ")}
+    >
       <div className="flex flex-row gap-1">
         {traitsInOrder.map((traitSlug) => {
           const trait = traits.find((t) => t.slug === traitSlug);
@@ -143,7 +147,7 @@ const traitCounters = {
     },
   },
 };
-const generateUnitTooltip = (traits: Trait[]) => {
+const generateTraitsTooltip = (traits: Trait[]) => {
   const sortedTraits = traits.sort(
     (a, b) => traitsInOrder.indexOf(a.slug) - traitsInOrder.indexOf(b.slug),
   );
@@ -160,7 +164,8 @@ const generateTraitDescription = (trait: Trait) => {
   return (
     <>
       <span className="font-semibold">{trait.name}</span> counters{" "}
-      {counter.counters.name}, countered by {counter.counteredBy.name}
+      <span className="font-semibold">{counter.counters.name}</span>, countered
+      by <span className="font-semibold">{counter.counteredBy.name}</span>
     </>
   );
 };
@@ -276,15 +281,15 @@ export default function Home() {
       {
         name: "Traits",
         key: "traits",
-        classNames: "w-24 min-w-24 max-w-24 md:w-32 md:min-w-32 md:max-w-32",
+        classNames: "w-28 min-w-28 max-w-28",
         render: (unit: Unit) => renderUnitTraits(unit.traits),
         filter: {
-          type: "select",
+          type: "multi_select",
           // Extract all name from all traits from all units
           options: uniqueArray(
             units.flatMap((unit) => unit.traits.map((t) => t["name"])),
           ),
-          val: (unit: Unit) => unit?.traits?.[0]?.name || "",
+          vals: (unit: Unit) => unit.traits.map((trait) => trait.name),
         },
       },
       {
@@ -482,6 +487,26 @@ export default function Home() {
                 ...prev,
                 [name]: (u: Unit) =>
                   e.target.value === "" || f.val(u) === e.target.value,
+              }))
+            }
+          >
+            <option value="">Any</option>
+            {f.options.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        );
+      case "multi_select":
+        return (
+          <select
+            className="w-full px-2 py-1 rounded-md border border-slate-400 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-xs font-normal"
+            onChange={(e) =>
+              setFilters((prev) => ({
+                ...prev,
+                [name]: (u: Unit) =>
+                  e.target.value === "" || f.vals(u).includes(e.target.value),
               }))
             }
           >
