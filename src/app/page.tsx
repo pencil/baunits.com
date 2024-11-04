@@ -62,9 +62,29 @@ const renderAttackType = (value: string) => {
       );
     case "Ground + Air":
       return (
-        <TextTooltip tooltip="This unit can attack air and ground units.">
+        <TextTooltip tooltip="This unit can attack ground and air units.">
           Ground + Air
         </TextTooltip>
+      );
+    default:
+      return value;
+  }
+};
+const renderTechTier = (value: string) => {
+  switch (value) {
+    case "Advanced Foundry":
+      return (
+        <>
+          <span className="sm:hidden">Adv. Foundry</span>
+          <span className="hidden sm:inline">Advanced Foundry</span>
+        </>
+      );
+    case "Advanced Starforge":
+      return (
+        <>
+          <span className="sm:hidden">Adv. Starforge</span>
+          <span className="hidden sm:inline">Advanced Starforge</span>
+        </>
       );
     default:
       return value;
@@ -74,13 +94,13 @@ const traitsInOrder = ["small", "antibig", "big", "splash"];
 const renderUnitTraits = (traits: Trait[]) => {
   if (!traits) return null;
   return (
-    <div className="flex flex-row gap-1">
+    <div className="flex flex-row gap-1 md:gap-2">
       {traitsInOrder.map((traitSlug) => {
         const trait = traits.find((t) => t.slug === traitSlug);
         return trait ? (
           renderUnitTrait(trait)
         ) : (
-          <div key={traitSlug} className="w-4 h-4"></div>
+          <div key={traitSlug} className="w-4 h-4 md:w-5 md:h-5"></div>
         );
       })}
     </div>
@@ -100,6 +120,7 @@ const renderUnitTrait = (trait: Trait) => {
           alt={trait.name}
           width={20}
           height={20}
+          className="w-4 h-4 md:w-5 md:h-5"
         />
       </Tooltip>
     </div>
@@ -257,8 +278,9 @@ export default function Home() {
         name: "Tech Tier",
         key: "tech_tier",
         sort_key: "index",
-        classNames: "w-36 min-w-36 max-w-36 md:w-44 md:min-w-44 md:max-w-44",
-        render: (unit: Unit) => unit.tech_tier,
+        classNames:
+          "w-32 min-w-32 max-w-32 sm:w-36 sm:min-w-36 sm:max-w-36 md:w-44 md:min-w-44 md:max-w-44",
+        render: (unit: Unit) => renderTechTier(unit.tech_tier),
         filter: {
           type: "select",
           options: uniqueArray(units.map((unit) => unit.tech_tier)),
@@ -292,7 +314,7 @@ export default function Home() {
       {
         name: "Traits",
         key: "traits",
-        classNames: "w-28 min-w-28 max-w-28",
+        classNames: "w-28 min-w-28 max-w-28 md:w-32 md:min-w-32 md:max-w-32",
         render: (unit: Unit) => renderUnitTraits(unit.traits),
         filter: {
           type: "multi_select",
