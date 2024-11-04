@@ -10,6 +10,7 @@ import Energy from "@/icons/Energy";
 import Matter from "@/icons/Matter";
 import Image from "next/image";
 import { useCallback, useMemo, useState } from "react";
+import { deflate } from "zlib";
 
 type Unit = (typeof units)[0];
 type Trait = (typeof units)[0]["traits"][0];
@@ -44,27 +45,35 @@ const renderAttackType = (value: string) => {
   switch (value) {
     case "Air":
       return (
-        <TextTooltip tooltip="This unit can only attack air units.">
-          Air
-        </TextTooltip>
+        <TextTooltip tooltip="Unit can only attack air units.">Air</TextTooltip>
       );
     case "Workers":
       return (
-        <TextTooltip tooltip="This unit can only attack worker units.">
+        <TextTooltip tooltip="Unit can only attack worker units.">
           Workers
         </TextTooltip>
       );
     case "Ground":
       return (
-        <TextTooltip tooltip="This unit can only attack ground units.">
+        <TextTooltip tooltip="Unit can only attack ground units.">
           Ground
         </TextTooltip>
       );
     case "Ground + Air":
       return (
-        <TextTooltip tooltip="This unit can attack ground and air units.">
+        <TextTooltip tooltip="Unit can attack ground and air units.">
           Ground + Air
         </TextTooltip>
+      );
+    default:
+      return value;
+  }
+};
+const renderAirGround = (value: string) => {
+  switch (value) {
+    case "Static":
+      return (
+        <TextTooltip tooltip="Unit cannot move once built.">Static</TextTooltip>
       );
     default:
       return value;
@@ -301,7 +310,7 @@ export default function Home() {
         name: "Type",
         key: "air_ground",
         classNames: "w-20 min-w-20 max-w-20 md:w-24 md:min-w-24 md:max-w-24",
-        render: (unit: Unit) => unit.air_ground,
+        render: (unit: Unit) => renderAirGround(unit.air_ground),
         filter: {
           type: "select",
           options: uniqueArray(units.map((unit) => unit.air_ground)),
