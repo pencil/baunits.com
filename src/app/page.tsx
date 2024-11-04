@@ -649,7 +649,7 @@ export default function Home() {
           filteredUnits.map((unit) => (
             <tr
               key={unit.slug}
-              className="hover:bg-slate-100 dark:hover:bg-slate-900 z-0"
+              className="hover:bg-slate-100 dark:hover:bg-slate-900 z-0 border-slate-200 dark:border-slate-700"
             >
               {columns.map((column, idx) => (
                 <td
