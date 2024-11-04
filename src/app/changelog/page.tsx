@@ -58,7 +58,7 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
                       return null;
                     }
                     const valueBefore =
-                      unit.before[key as keyof typeof unit.after];
+                      unit.before[key as keyof typeof unit.before];
                     if (valueBefore == value) {
                       return null;
                     }

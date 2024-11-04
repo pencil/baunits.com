@@ -1712,6 +1712,49 @@
           "page_url": "https://www.playbattleaces.com/units/artillery",
           "icon_url": "https://cdn.playbattleaces.com/images/icons/units/artillery.png"
         }
+      },
+      {
+        "before": null,
+        "after": {
+          "index": 35,
+          "name": "Gargantua",
+          "slug": "gargantua",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 5,
+          "damage": 5,
+          "speed": 2,
+          "range": 2,
+          "matter": 250,
+          "energy": 250,
+          "bandwidth": 10,
+          "war_credits": null,
+          "page_url": "https://www.playbattleaces.com/units/gargantua",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/gargantua.png",
+          "traits": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ]
+        }
       }
     ]
   }
