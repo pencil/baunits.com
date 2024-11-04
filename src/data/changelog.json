@@ -1027,7 +1027,7 @@
           "tech_tier": "Foundry",
           "air_ground": "Ground",
           "splash": true,
-          "melee": false,
+          "melee": true,
           "ability": null,
           "health": 1,
           "damage": 5,
@@ -1759,4 +1759,3 @@
     ]
   }
 ]
-
