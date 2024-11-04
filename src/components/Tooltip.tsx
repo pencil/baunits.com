@@ -28,7 +28,7 @@ export default function Tooltip({
       {tooltip ? (
         <span
           className={classNames(
-            "font-normal text-xs invisible group-hover:visible opacity-0 group-hover:opacity-100 transition bg-slate-50 dark:bg-slate-600 dark:text-white p-1 rounded absolute mt-2 whitespace-nowrap z-50 shadow-md",
+            "font-normal text-xs invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity bg-slate-50 dark:bg-slate-600 dark:text-white p-1 rounded absolute mt-2 whitespace-nowrap z-50 shadow-md",
             position == "bottom"
               ? "top-full -translate-x-1/2 left-1/2"
               : position == "right"
@@ -39,7 +39,7 @@ export default function Tooltip({
           )}
           role="tooltip"
         >
-          {tooltipNode || tooltip}
+          <span>{tooltipNode || tooltip}</span>
         </span>
       ) : null}
     </div>

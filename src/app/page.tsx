@@ -288,7 +288,7 @@ export default function Home() {
         key: "tech_tier",
         sort_key: "index",
         classNames:
-          "w-32 min-w-32 max-w-32 sm:w-36 sm:min-w-36 sm:max-w-36 md:w-44 md:min-w-44 md:max-w-44",
+          "w-28 min-w-28 max-w-28 sm:w-36 sm:min-w-36 sm:max-w-36 md:w-44 md:min-w-44 md:max-w-44",
         render: (unit: Unit) => renderTechTier(unit.tech_tier),
         filter: {
           type: "select",
