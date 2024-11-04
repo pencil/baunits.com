@@ -507,12 +507,12 @@ export default function Home() {
               setFilters((prev) => ({
                 ...prev,
                 [name]: (u: Unit) =>
-                  e.target.value === "" ||
+                  e.target.value === "*" ||
                   f.val(u) === (e.target.value === "true"),
               }))
             }
           >
-            <option value="">Any</option>
+            <option value="*">(Any)</option>
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
@@ -525,11 +525,11 @@ export default function Home() {
               setFilters((prev) => ({
                 ...prev,
                 [name]: (u: Unit) =>
-                  e.target.value === "" || f.val(u) === e.target.value,
+                  e.target.value === "*" || f.val(u) === e.target.value,
               }))
             }
           >
-            <option value="">Any</option>
+            <option value="*">(Any)</option>
             {f.options.map((option) => (
               <option key={option} value={option}>
                 {option}
@@ -545,11 +545,14 @@ export default function Home() {
               setFilters((prev) => ({
                 ...prev,
                 [name]: (u: Unit) =>
-                  e.target.value === "" || f.vals(u).includes(e.target.value),
+                  e.target.value === "*" ||
+                  (e.target.value === "" && f.vals(u).length === 0) ||
+                  f.vals(u).includes(e.target.value),
               }))
             }
           >
-            <option value="">Any</option>
+            <option value="*">(Any)</option>
+            <option value="">(None)</option>
             {f.options.map((option) => (
               <option key={option} value={option}>
                 {option}
