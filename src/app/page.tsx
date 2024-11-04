@@ -100,7 +100,16 @@ const renderUnitTraits = (traits: Trait[]) => {
         return trait ? (
           renderUnitTrait(trait)
         ) : (
-          <div key={traitSlug} className="w-4 h-4 md:w-5 md:h-5"></div>
+          <Image
+            key={traitSlug}
+            unoptimized
+            src={`/icons/traits/${traitSlug}.png`}
+            alt=""
+            width={24}
+            height={24}
+            className="w-5 h-5 md:w-6 md:h-6 opacity-10"
+            ario-hidden="true"
+          />
         );
       })}
     </div>
@@ -118,9 +127,9 @@ const renderUnitTrait = (trait: Trait) => {
           unoptimized
           src={`/icons/traits/${trait.slug}.png`}
           alt={trait.name}
-          width={20}
-          height={20}
-          className="w-4 h-4 md:w-5 md:h-5"
+          width={24}
+          height={24}
+          className="w-5 h-5 md:w-6 md:h-6"
         />
       </Tooltip>
     </div>
@@ -314,7 +323,7 @@ export default function Home() {
       {
         name: "Traits",
         key: "traits",
-        classNames: "w-28 min-w-28 max-w-28 md:w-32 md:min-w-32 md:max-w-32",
+        classNames: "w-28 min-w-28 max-w-28 md:w-36 md:min-w-36 md:max-w-36",
         render: (unit: Unit) => renderUnitTraits(unit.traits),
         filter: {
           type: "multi_select",
