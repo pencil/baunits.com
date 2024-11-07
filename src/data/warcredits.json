@@ -1,7 +1,7 @@
 {
   "crab": 0,
   "hunter": 0,
-  "recall": 400,
+  "recall": 0,
   "recallhunter": 700,
   "scorpion": 500,
   "beetle": 500,
@@ -11,6 +11,9 @@
   "missilebot": 400,
   "wasp": 400,
   "hornet": 700,
+  "knight": -1,
+  "crossbow": -1,
+
   "ballista": 0,
   "kingcrab": 0,
   "crusader": 400,
@@ -23,12 +26,15 @@
   "destroyer": 500,
   "raider": 500,
   "turret": 400,
+
   "heavyballista": 0,
-  "predator": 700,
+  "gargantua": 1500,
   "sniper": 700,
   "advancedblink": 700,
   "assaultbot": 700,
+  "advancedbot": 700,
   "behemoth": 500,
+
   "butterfly": 0,
   "dragonfly": 500,
   "falcon": 700,
@@ -36,12 +42,14 @@
   "advancedrecall": 700,
   "mammoth": 400,
   "stinger": 700,
-  "heavyturret": 300,
+  "flakturret": 300,
+
   "bulwark": 0,
   "katbus": 1500,
   "locust": 700,
   "kraken": 1500,
+  "predator": 700,
   "valkyrie": 500,
-  "artillery": 400,
-  "advancedbot": 700
+  "advanceddestroyer": 500,
+  "artillery": 400
 }

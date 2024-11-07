@@ -99,7 +99,7 @@
     "matter": 100,
     "energy": 0,
     "bandwidth": 2,
-    "war_credits": 400,
+    "war_credits": 0,
     "page_url": "https://www.playbattleaces.com/units/recall",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/recall.png",
     "traits": [
@@ -524,7 +524,7 @@
     "matter": 200,
     "energy": 0,
     "bandwidth": 4,
-    "war_credits": null,
+    "war_credits": -1,
     "page_url": "https://www.playbattleaces.com/units/knight",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/knight.png",
     "traits": [
@@ -564,7 +564,7 @@
     "matter": 100,
     "energy": 100,
     "bandwidth": 4,
-    "war_credits": null,
+    "war_credits": -1,
     "page_url": "https://www.playbattleaces.com/units/crossbow",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/crossbow.png",
     "traits": [
@@ -1418,7 +1418,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
-    "war_credits": null,
+    "war_credits": 300,
     "page_url": "https://www.playbattleaces.com/units/flakturret",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/flakturret.png",
     "traits": [],
@@ -1495,7 +1495,7 @@
     "matter": 250,
     "energy": 250,
     "bandwidth": 10,
-    "war_credits": null,
+    "war_credits": 1500,
     "page_url": "https://www.playbattleaces.com/units/gargantua",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/gargantua.png",
     "traits": [
@@ -2045,7 +2045,7 @@
     "matter": 125,
     "energy": 125,
     "bandwidth": 5,
-    "war_credits": null,
+    "war_credits": 500,
     "page_url": "https://www.playbattleaces.com/units/advanceddestroyer",
     "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advanceddestroyer.png",
     "traits": [

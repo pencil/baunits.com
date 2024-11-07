@@ -9,7 +9,7 @@ import Bandwidth from "@/icons/Bandwidth";
 import Energy from "@/icons/Energy";
 import Matter from "@/icons/Matter";
 import Image from "next/image";
-import { useCallback, useMemo, useState } from "react";
+import { ReactNode, useCallback, useMemo, useState } from "react";
 import { deflate } from "zlib";
 
 type Unit = (typeof units)[0];
@@ -41,6 +41,23 @@ const renderBars = (value: number, max = 5) => (
 const renderResource = (value: number) => (
   <div className="w-full text-right">{value}</div>
 );
+const renderWarCredits = (value: number) => {
+  let c: string | number | ReactNode = value;
+  switch (value) {
+    case null:
+      c = "?";
+    case -1:
+      c = (
+        <TextTooltip
+          tooltip="This unit is unlocked through the Warpath."
+          position="left"
+        >
+          💸
+        </TextTooltip>
+      );
+  }
+  return <div className="w-full text-right">{c}</div>;
+};
 const renderAttackType = (value: string) => {
   switch (value) {
     case "Air":
@@ -460,11 +477,7 @@ export default function Home() {
         header: <span className="text-base">💰</span>,
         description: "War Credits required to unlock",
         key: "war_credits",
-        render: (unit: Unit) => (
-          <div className="w-full text-right">
-            {unit.war_credits === null ? "?" : unit.war_credits}
-          </div>
-        ),
+        render: (unit: Unit) => renderWarCredits(unit.war_credits),
         sortable: true,
         numeric: true,
       },
