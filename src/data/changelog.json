@@ -1757,5 +1757,58 @@
         }
       }
     ]
+  },
+  {
+    "date": "2025-04-04",
+    "changes": [
+      {
+        "before": null,
+        "after": {
+          "index": 39,
+          "name": "Advanced Mortar",
+          "slug": "advancedmortar",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": {
+            "name": "Setup",
+            "slug": "setup",
+            "description": "Unit becomes immobile and can attack.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/setup.png"
+          },
+          "health": 4,
+          "damage": 5,
+          "speed": 2,
+          "range": 5,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": null,
+          "page_url": "https://www.playbattleaces.com/units/advancedmortar",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedmortar.png",
+          "traits": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ]
+        }
+      }
+    ]
   }
 ]
