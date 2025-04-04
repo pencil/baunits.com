@@ -41,7 +41,7 @@ const renderBars = (value: number, max = 5) => (
 const renderResource = (value: number) => (
   <div className="w-full text-right">{value}</div>
 );
-const renderWarCredits = (value: number) => {
+const renderWarCredits = (value: number | null) => {
   let c: string | number | ReactNode = value;
   switch (value) {
     case null:
