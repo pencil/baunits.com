@@ -15,11 +15,12 @@ deploy/production: out
 	 	--metadata-directive REPLACE \
 		--cache-control max-age=31536000,public,immutable,stale-while-revalidate=31536000,stale-if-error=31536000
 	aws s3 sync out s3://baunits.com \
+		--size-only \
 		--metadata-directive REPLACE \
 		--cache-control max-age=31536000,public,immutable,stale-while-revalidate=31536000,stale-if-error=31536000 \
 		--exclude '*' \
-		--include '/*.png' \
-		--include '/*.ico'
+		--include '*.png' \
+		--include '*.ico'
 	aws s3 sync out s3://baunits.com \
 		--metadata-directive REPLACE \
 		--cache-control max-age=300,public,must-revalidate \
