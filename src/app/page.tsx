@@ -46,6 +46,7 @@ const renderWarCredits = (value: number | null) => {
   switch (value) {
     case null:
       c = "?";
+      break;
     case -1:
       c = (
         <TextTooltip
@@ -55,6 +56,7 @@ const renderWarCredits = (value: number | null) => {
           💸
         </TextTooltip>
       );
+      break;
   }
   return <div className="w-full text-right">{c}</div>;
 };
