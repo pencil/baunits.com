@@ -1810,5 +1810,73 @@
         }
       }
     ]
+  },
+  {
+    "date": "2025-04-08",
+    "changes": [
+      {
+        "before": null,
+        "after": {
+          "index": 50,
+          "name": "Shade",
+          "slug": "shade",
+          "tech_tier": "Advanced Starforge",
+          "air_ground": "Air",
+          "attack_type": "Ground",
+          "ability": null,
+          "health": 4,
+          "damage": 5,
+          "speed": 4,
+          "range": 2,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": null,
+          "page_url": "https://www.playbattleaces.com/units/shade",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/shade.png",
+          "traits": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            },
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            },
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            },
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            },
+            {
+              "name": "Anti-Air",
+              "slug": "antiair",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+            }
+          ]
+        }
+      }
+    ]
   }
 ]
