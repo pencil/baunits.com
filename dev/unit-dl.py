@@ -191,10 +191,13 @@ def unit_from_json(unit: dict, index: int = 0) -> Unit:
 
 data = get_page_json(FIRST_UNIT_URL)
 
-units = [
-    unit_from_json(unit, idx)
-    for idx, unit in enumerate(data["props"]["pageProps"]["units"])
-]
+page_props = data["props"]["pageProps"]
+units_raw = (
+    page_props["units"]
+    if "units" in page_props
+    else page_props["subscription"]["initialData"]["allUnits"]
+)
+units = [unit_from_json(unit, idx) for idx, unit in enumerate(units_raw)]
 existing_units: list[Unit] = []
 if CHANGELOG and os.path.exists("src/data/units.json"):
     with open("src/data/units.json", "r") as jsonfile:
