@@ -59,9 +59,33 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
                     }
                     const valueBefore =
                       unit.before[key as keyof typeof unit.before];
-                    if (valueBefore == value) {
-                      return null;
+
+                    // Handle arrays (like traits, counters, countered_by) by joining the names.
+                    if (Array.isArray(value) && Array.isArray(valueBefore)) {
+                      const getNames = (arr: any[]) =>
+                        arr
+                          .map((item) =>
+                            typeof item === "object" &&
+                            item !== null &&
+                            "name" in item
+                              ? item.name
+                              : item,
+                          )
+                          .join(", ");
+                      const formattedArrayAfter = getNames(value);
+                      const formattedArrayBefore = getNames(valueBefore);
+                      if (formattedArrayBefore === formattedArrayAfter) {
+                        return null;
+                      }
+                      return (
+                        <li key={key}>
+                          {beautifyKey(key)}: {formattedArrayBefore || "?"} →{" "}
+                          {formattedArrayAfter || "?"}
+                        </li>
+                      );
                     }
+
+                    // Only handle primitives.
                     if (
                       (typeof value !== "string" &&
                         typeof value !== "number" &&
@@ -73,6 +97,9 @@ const renderUpdatedUnits = (changes: (typeof changelog)[0]["changes"]) => {
                       return null;
                     }
 
+                    if (valueBefore === value) {
+                      return null;
+                    }
                     const formattedValue = formatValue(value);
                     const formattedValueBefore = formatValue(valueBefore);
 
