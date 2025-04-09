@@ -1878,5 +1878,712 @@
         }
       }
     ]
+  },
+  {
+    "date": "2025-04-09",
+    "changes": [
+      {
+        "before": {
+          "index": 7,
+          "name": "Blink Hunter",
+          "slug": "blinkhunter",
+          "tech_tier": "Core",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": {
+            "name": "Blink",
+            "slug": "blink",
+            "description": "Teleports a short distance towards a target location.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/blink.png"
+          },
+          "health": 2,
+          "damage": 3,
+          "speed": 2,
+          "range": 2,
+          "matter": 50,
+          "energy": 50,
+          "bandwidth": 2,
+          "war_credits": 400,
+          "page_url": "https://www.playbattleaces.com/units/blinkhunter",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blinkhunter.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ]
+        },
+        "after": {
+          "index": 7,
+          "name": "Blink Hunter",
+          "slug": "blinkhunter",
+          "tech_tier": "Core",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": {
+            "name": "Blink",
+            "slug": "blink",
+            "description": "Teleports a short distance towards a target location.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/blink.png"
+          },
+          "health": 2,
+          "damage": 2,
+          "speed": 2,
+          "range": 2,
+          "matter": 50,
+          "energy": 50,
+          "bandwidth": 2,
+          "war_credits": 400,
+          "page_url": "https://www.playbattleaces.com/units/blinkhunter",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blinkhunter.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ]
+        }
+      },
+      {
+        "before": {
+          "index": 22,
+          "name": "Heavy Hunter",
+          "slug": "heavyhunter",
+          "tech_tier": "Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 4,
+          "damage": 4,
+          "speed": 3,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/heavyhunter",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png",
+          "traits": [],
+          "counters": [],
+          "countered_by": []
+        },
+        "after": {
+          "index": 22,
+          "name": "Heavy Hunter",
+          "slug": "heavyhunter",
+          "tech_tier": "Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 4,
+          "damage": 5,
+          "speed": 3,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/heavyhunter",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/heavyhunter.png",
+          "traits": [],
+          "counters": [],
+          "countered_by": []
+        }
+      },
+      {
+        "before": {
+          "index": 25,
+          "name": "Turret",
+          "slug": "turret",
+          "tech_tier": "Foundry",
+          "air_ground": "Static",
+          "attack_type": "Ground",
+          "ability": {
+            "name": "Destruct",
+            "slug": "destruct",
+            "description": "Destroy the unit to free up bandwidth.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/destruct.png"
+          },
+          "health": 4,
+          "damage": 5,
+          "speed": 0,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 400,
+          "page_url": "https://www.playbattleaces.com/units/turret",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/turret.png",
+          "traits": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ]
+        },
+        "after": {
+          "index": 24,
+          "name": "Turret",
+          "slug": "turret",
+          "tech_tier": "Foundry",
+          "air_ground": "Static",
+          "attack_type": "Ground",
+          "ability": {
+            "name": "Destruct",
+            "slug": "destruct",
+            "description": "Destroy the unit to free up bandwidth.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/destruct.png"
+          },
+          "health": 5,
+          "damage": 5,
+          "speed": 0,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 400,
+          "page_url": "https://www.playbattleaces.com/units/turret",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/turret.png",
+          "traits": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ]
+        }
+      },
+      {
+        "before": {
+          "index": 29,
+          "name": "Airship",
+          "slug": "airship",
+          "tech_tier": "Starforge",
+          "air_ground": "Air",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 3,
+          "damage": 4,
+          "speed": 3,
+          "range": 2,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 0,
+          "page_url": "https://www.playbattleaces.com/units/airship",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/airship.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            },
+            {
+              "name": "Anti-Air",
+              "slug": "antiair",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+            }
+          ]
+        },
+        "after": {
+          "index": 29,
+          "name": "Airship",
+          "slug": "airship",
+          "tech_tier": "Starforge",
+          "air_ground": "Air",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 3,
+          "damage": 5,
+          "speed": 3,
+          "range": 2,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 0,
+          "page_url": "https://www.playbattleaces.com/units/airship",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/airship.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            },
+            {
+              "name": "Anti-Air",
+              "slug": "antiair",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antiair.png"
+            }
+          ]
+        }
+      },
+      {
+        "before": {
+          "index": 33,
+          "name": "Flak Turret",
+          "slug": "flakturret",
+          "tech_tier": "Starforge",
+          "air_ground": "Static",
+          "attack_type": "Air",
+          "ability": {
+            "name": "Destruct",
+            "slug": "destruct",
+            "description": "Destroy the unit to free up bandwidth.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/destruct.png"
+          },
+          "health": 4,
+          "damage": 5,
+          "speed": 0,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 300,
+          "page_url": "https://www.playbattleaces.com/units/flakturret",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/flakturret.png",
+          "traits": [],
+          "counters": [],
+          "countered_by": []
+        },
+        "after": {
+          "index": 33,
+          "name": "Flak Turret",
+          "slug": "flakturret",
+          "tech_tier": "Starforge",
+          "air_ground": "Static",
+          "attack_type": "Ground + Air",
+          "ability": {
+            "name": "Destruct",
+            "slug": "destruct",
+            "description": "Destroy the unit to free up bandwidth.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/destruct.png"
+          },
+          "health": 5,
+          "damage": 3,
+          "speed": 0,
+          "range": 4,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 300,
+          "page_url": "https://www.playbattleaces.com/units/flakturret",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/flakturret.png",
+          "traits": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ]
+        }
+      },
+      {
+        "before": {
+          "index": 36,
+          "name": "Sniper",
+          "slug": "sniper",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground",
+          "ability": null,
+          "health": 2,
+          "damage": 5,
+          "speed": 1,
+          "range": 5,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/sniper",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/sniper.png",
+          "traits": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ]
+        },
+        "after": {
+          "index": 36,
+          "name": "Sniper",
+          "slug": "sniper",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground",
+          "ability": null,
+          "health": 2,
+          "damage": 5,
+          "speed": 2,
+          "range": 5,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/sniper",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/sniper.png",
+          "traits": [],
+          "counters": [],
+          "countered_by": []
+        }
+      },
+      {
+        "before": {
+          "index": 38,
+          "name": "Assaultbot",
+          "slug": "assaultbot",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground",
+          "ability": {
+            "name": "Overclock",
+            "slug": "overclock",
+            "description": "Temporarily increases movement and attack speed.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+          },
+          "health": 1,
+          "damage": 3,
+          "speed": 2,
+          "range": 2,
+          "matter": 50,
+          "energy": 0,
+          "bandwidth": 1,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/assaultbot",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            },
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            },
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            },
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ]
+        },
+        "after": {
+          "index": 38,
+          "name": "Assaultbot",
+          "slug": "assaultbot",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground",
+          "ability": {
+            "name": "Overclock",
+            "slug": "overclock",
+            "description": "Temporarily increases movement and attack speed.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+          },
+          "health": 1,
+          "damage": 3,
+          "speed": 2,
+          "range": 2,
+          "matter": 50,
+          "energy": 0,
+          "bandwidth": 1,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/assaultbot",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/assaultbot.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ]
+        }
+      },
+      {
+        "before": {
+          "index": 40,
+          "name": "Advancedbot",
+          "slug": "advancedbot",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": {
+            "name": "Overclock",
+            "slug": "overclock",
+            "description": "Temporarily increases movement and attack speed.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+          },
+          "health": 1,
+          "damage": 4,
+          "speed": 2,
+          "range": 2,
+          "matter": 25,
+          "energy": 25,
+          "bandwidth": 1,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/advancedbot",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedbot.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ]
+        },
+        "after": {
+          "index": 39,
+          "name": "Advancedbot",
+          "slug": "advancedbot",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": {
+            "name": "Overclock",
+            "slug": "overclock",
+            "description": "Temporarily increases movement and attack speed.",
+            "icon_url": "https://cdn.playbattleaces.com/images/icons/abilities/overclock.png"
+          },
+          "health": 1,
+          "damage": 5,
+          "speed": 2,
+          "range": 2,
+          "matter": 25,
+          "energy": 25,
+          "bandwidth": 1,
+          "war_credits": 700,
+          "page_url": "https://www.playbattleaces.com/units/advancedbot",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/advancedbot.png",
+          "traits": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Anti-Big",
+              "slug": "antibig",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/antibig.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ]
+        }
+      },
+      {
+        "before": null,
+        "after": {
+          "index": 42,
+          "name": "Blaster",
+          "slug": "blaster",
+          "tech_tier": "Advanced Foundry",
+          "air_ground": "Ground",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 3,
+          "damage": 5,
+          "speed": 2,
+          "range": 3,
+          "matter": 125,
+          "energy": 125,
+          "bandwidth": 5,
+          "war_credits": null,
+          "page_url": "https://www.playbattleaces.com/units/blaster",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/blaster.png",
+          "traits": [
+            {
+              "name": "Splash",
+              "slug": "splash",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/splash.png"
+            }
+          ],
+          "counters": [
+            {
+              "name": "Small",
+              "slug": "small",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/small.png"
+            }
+          ],
+          "countered_by": [
+            {
+              "name": "Big",
+              "slug": "big",
+              "icon_url": "https://cdn.playbattleaces.com/images/icons/traits/big.png"
+            }
+          ]
+        }
+      }
+    ]
   }
 ]
