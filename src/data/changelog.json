@@ -2585,5 +2585,35 @@
         }
       }
     ]
+  },
+  {
+    "date": "2025-04-10",
+    "changes": [
+      {
+        "before": null,
+        "after": {
+          "index": 2,
+          "name": "Guardian Shield",
+          "slug": "guardianshield",
+          "tech_tier": "Core",
+          "air_ground": "Static",
+          "attack_type": "Ground + Air",
+          "ability": null,
+          "health": 0,
+          "damage": 5,
+          "speed": 0,
+          "range": 5,
+          "matter": 0,
+          "energy": 0,
+          "bandwidth": 0,
+          "war_credits": null,
+          "page_url": "https://www.playbattleaces.com/units/guardianshield",
+          "icon_url": "https://cdn.playbattleaces.com/images/icons/units/guardianshield.png",
+          "traits": [],
+          "counters": [],
+          "countered_by": []
+        }
+      }
+    ]
   }
 ]
